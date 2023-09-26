@@ -1,0 +1,41 @@
+
+body {
+ background-image: url("entry 3 back.jpeg");
+ background-size: 100% 100%;
+}
+
+marquee{
+ font-size:20px;
+ font-family: "pf-pixelscript", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+ color:#9FF4DF;
+}
+
+h1{
+ font-family: "lores-9-plus-narrow", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+ color:#9FF4DF;
+}
+
+h3{
+ font-size:20px;
+ font-family: "pf-pixelscript", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+ color:#9FF4DF;
+}
+
+p{
+ font-family: "lores-9-plus-narrow", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+
+ font-size:15px;
+ line-height: 1.5;
+ color:#3A2DD6;
+
+ background-color:#9FF4DF;
+ margin: 20px 80px 35px 80px;
+}
