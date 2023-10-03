@@ -1,0 +1,37 @@
+
+body {
+ background-image: url("b4.png");
+ background-size: 100% 100%;
+}
+
+h1{
+ color:#FFBFC3;
+ font-family: "hegante", sans-serif;
+ font-weight: 300;
+ font-style: normal;
+ font-size:35px
+}
+
+h3{
+ color:#FFBFC3;
+ font-family: "hegante", sans-serif;
+ font-weight: 300;
+ font-style: normal;
+ font-size:20px
+}
+
+.column{
+  float:left;
+  padding: 0px 20px 20px 20px;
+}
+
+p{
+ line-height: 1.7;
+ color:#024D6D;
+ background-color:#FFBFC3;
+ border-radius:40px;
+ font-family: "brevia", sans-serif;
+ font-weight: 500;
+ font-style: normal;
+ font-size:13px;
+}
