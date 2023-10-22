@@ -30,16 +30,41 @@ h3{
  color:#9FF4DF;
 }
 
-p{
+
+
+.p1{
  font-family: "lores-9-plus-narrow", sans-serif;
  font-weight: 400;
  font-style: normal;
-
  font-size:15px;
  line-height: 1.2;
  color:#3A2DD6;
-
-
  background-color:#9FF4DF;
+ border-radius: 10px
  margin: 20px 80px 35px 80px;
 }
+
+.p2{
+ font-family: "lores-9-plus-narrow", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+ font-size:15px;
+ line-height: 1.2;
+ color:#3A2DD6;
+ background-color:#9FF4DF;
+ border-radius: 10px
+ margin: 20px 80px 35px 80px;
+}
+
+.p3{
+ font-family: "lores-9-plus-narrow", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+ font-size:15px;
+ line-height: 1.2;
+ color:#3A2DD6;
+ background-color:#9FF4DF;
+ border-radius: 10px
+ margin: 20px 80px 35px 80px;
+}
+
