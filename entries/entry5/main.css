@@ -42,6 +42,11 @@ body {
 .center-image {
   flex: 0 0 40%; 
   margin: -10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.center-image:hover {
+  transform: scale(1.12);
 }
 
 @media (max-width: 768px) {
@@ -83,6 +88,35 @@ h3{
 .top {
   text-align: center;
   margin-bottom: -10px;
+}
+
+.overlay{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+ }
+}
+
+.top-text {
+  color: white;
+  font-family: "grover-slab", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 13px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.top:hover .overlay{
+  opacity: 1;
 }
 
 .content{
