@@ -116,10 +116,12 @@ img {
 }
 
 footer{
+  background-color: lightpink;
   color: white;
   text-align: center;
   font-size: 15px;
   padding: 5px;
+  margin-top: 600px;
 }
 
 
