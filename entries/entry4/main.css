@@ -12,6 +12,15 @@ body {
   align-items: center;
 }
 
+footer{
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 5px;
+  background-color: lightpink;
+  margin-top: 35px;
+}
+
 .flex-container {
   display: flex;
   margin: 5px;

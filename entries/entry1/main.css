@@ -6,6 +6,16 @@ body {
 	background-position: center; 
 }
 
+footer{
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 5px;
+  background-color: lightgrey;
+  margin-top: 35px;
+}
+
+
 .h1{
   text-align: center;
   font-size: 40px;
