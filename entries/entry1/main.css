@@ -103,3 +103,8 @@ footer{
     }
 }
 
+a{
+  font-family: "trilby", serif;
+  font-weight: 600;
+  font-style: normal;
+}

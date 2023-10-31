@@ -104,3 +104,9 @@ p{
 .ex3{
   margin-top: 25px;
  }
+
+ a{
+ font-family: "brevia", sans-serif;
+ font-weight: 700;
+ font-style: normal;
+ }

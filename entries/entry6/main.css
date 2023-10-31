@@ -124,4 +124,9 @@ footer{
   margin-top: 600px;
 }
 
+a{
+  font-family: "houschka-rounded", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
 

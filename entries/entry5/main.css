@@ -163,3 +163,9 @@ p:hover {
   font-size: 13px;
   line-height: 1.6;
 }
+
+a{
+  font-family: "grover-slab", serif;
+  font-weight: 600;
+  font-style: normal;
+}
