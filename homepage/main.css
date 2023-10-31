@@ -1,3 +1,43 @@
-body{
-	background-color: pink;
+body {
+  background-attachment: fixed;
+  background-image: url("hpbk.jpg");
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
 }
+
+body {
+  cursor: url("shub.png"), auto;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+footer {
+  bottom: 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+}
+
+.ordered-text {
+  position: absolute;
+  white-space: nowrap; /* 防止文本换行 */
+}
+
+/* 设置每个文本的初始位置 */
+#text1 { top: 50px; left: 800px; }
+#text2 { top: 150px; left: 100px; }
+#text3 { top: 250px; left: 150px; }
+#text4 { top: 80px; left: 800px; }
+#text5 { top: 400px; left: 100px; }
+#text6 { top: 300px; left: 150px; }
+
+
+@media screen and (max-width: 768px) {
+  .ordered-text {
+    position: static; /* 不再使用绝对定位 */
+
+
