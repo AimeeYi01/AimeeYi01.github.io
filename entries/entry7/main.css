@@ -44,7 +44,6 @@ h2 {
   }
 }
 
-
 body {
   display: flex;
   flex-wrap: wrap;
@@ -72,31 +71,127 @@ svg {
   text-align: center;
   margin-top: 25px;
   margin-bottom: 30px;
+  position: relative;
+}
+
+.hover3 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.bottom-image:hover .hover3 {
+  opacity: 1;
+}
+
+.text3 {
+  font-family: "houschka-rounded", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.65; 
+  color: #6A4524;
+  text-shadow: 0 0 5px #ffffff;
+  background: rgba(255,230,213,0.7);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .right-image {
   text-align: center;
   margin-top: 30px;
+  position: relative;
+}
+
+.hover2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.right-image:hover .hover2 {
+  opacity: 1;
+}
+
+.text2 {
+  font-family: "houschka-rounded", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.65; 
+  color: #6A4524;
+  text-shadow: 0 0 5px #ffffff;
+  background: rgba(255,230,213,0.7);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .left-image {
   text-align: center;
   margin-top: 40px;
+  position: relative;
 }
 
-.left-image:hover .ho1 {
-  display: block;
-}
-
-.ho1 {
+.hover1 {
   position: absolute;
-  top: -50px;
+  top: 0;
+  bottom: 0;
   left: 0;
-  display: none;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
 }
 
-.left-image:hover {
-  
+.left-image:hover .hover1 {
+  opacity: 1;
+}
+
+.text1 {
+  font-family: "houschka-rounded", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.65; 
+  color: #6A4524;
+  text-shadow: 0 0 5px #ffffff;
+  background: rgba(255,230,213,0.7);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 p {
