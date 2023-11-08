@@ -1,0 +1,131 @@
+body {
+  background-attachment: fixed;
+  background-image: url("bk7.jpg");
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+}
+
+h1 {
+  margin-left: 20px;
+  font-size: 50px;
+  font-family: "synthemesc", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #D26D37;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+h2 {
+  font-size: 28px;
+  color: #D57A48;
+  margin-left: 10px;
+  font-family: "synthemesc", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+#mt {
+  height: 70px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+  opacity: 0.5;
+  animation: rotate 4s linear infinite;
+}
+
+ @keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0;
+}
+
+svg {
+  width: 100%;
+  height: 100px;       
+}
+
+.left-image, .center-text, .bottom-image, .right-image {
+  box-sizing: border-box;
+  flex: 1 1 25%; 
+  padding: 0px;
+}
+
+.center-text{
+  margin-top: -10px;
+}
+
+.bottom-image {
+  align-self: flex-end;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.right-image {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.left-image {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.left-image:hover .ho1 {
+  display: block;
+}
+
+.ho1 {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  display: none;
+}
+
+.left-image:hover {
+  
+}
+
+p {
+  text-align: left;
+  font-family: "houschka-rounded", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.65; 
+  color: #6A4524;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+footer {
+  font-size: 15px;
+  text-align: center;
+  font-family: "houschka-rounded", sans-serif;
+  font-weight: 800;
+  line-height: 1.65;
+  background-color: #FFE6D5;
+  padding: 5px;
+  position: fixed;
+  margin-top: 150px;
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .left-image, .center-text, .bottom-image, .right-image {
+    flex: 1 1 100%;
+    margin: 15px;
+  }
+}
