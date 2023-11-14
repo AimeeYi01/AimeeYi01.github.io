@@ -1,0 +1,33 @@
+body {
+      align-items: center;
+      justify-content: center;
+      background-color: #684DA8; 
+      transition: background-color 0.3s ease;
+    }
+
+img {
+	text-align: center;
+	max-width: 100%;
+	cursor: pointer;
+	margin-top: 40px;
+}
+
+
+h1 {
+	margin-top: 45px;
+	text-align: center;
+	font-family: "eight", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 45px;
+    color: white;
+}
+
+h3{
+	font-family: "puffin-display-soft", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
