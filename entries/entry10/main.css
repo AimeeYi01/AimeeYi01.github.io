@@ -1,0 +1,106 @@
+body {
+  background-attachment: fixed;
+  background-image: url('e10gif1.gif'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+}
+
+#imageContainer {
+  position: relative;
+  overflow: hidden;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+#slideshow {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.slide img {
+  max-height: 420px;
+  width: auto;
+}
+
+#title {
+  font-family: "chorine-large", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-left: 30px;
+  color: #FC57B8;
+  text-shadow: 0 0 10px #FFD6ED;
+}
+
+#toggleButton {
+  margin-top: 15px;
+  margin-left: 30px;
+  padding: 10px;
+  font-size: 15px;
+  font-family: "brevia", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #704DD1;
+  background-color: #FFD7EE;
+  cursor: pointer;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+#content {
+  width: 50%;
+  margin: 30px;
+  margin-top: -10px;
+  margin-bottom: 60px;
+}
+
+p {
+  font-family: "brevia", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #704DD1;
+  text-shadow: 0 0 10px #FFD6ED;
+}
+
+#scrollingText {
+  position: fixed;
+  top: 40px;
+  right: 140px;
+  width: 300px; 
+  height: 100vh;
+  overflow: hidden;
+  white-space: nowrap; 
+  z-index: 999;
+}
+
+#scrollingText {
+  margin: 0px 0;
+  animation: scroll 10s linear infinite; 
+  transform: translateY(100%);
+}
+
+#scrollingText {
+  font-family: "brevia", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 18px;
+  color: #FB23A1;
+  text-shadow: 0 0 15px #FFD6ED;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(-100%); 
+  }
+}
