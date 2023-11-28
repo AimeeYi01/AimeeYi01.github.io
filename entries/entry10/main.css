@@ -78,7 +78,7 @@ p {
   height: 100vh;
   overflow: hidden;
   white-space: nowrap; 
-  z-index: 999;
+  z-index: 100;
 }
 
 #scrollingText {
