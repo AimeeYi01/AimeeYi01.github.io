@@ -10,16 +10,68 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
 }
 
-footer{
-  color: white;
-  text-align: center;
-  font-size: 15px;
-  padding: 5px;
-  background-color: lightpink;
+h1 {
+  color: #F7A3B2;
+  font-family: "meatball", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 38px;
   margin-top: 30px;
+  text-align: center;
+  text-shadow: 0 0 6px #CE1235;
+}
+
+h2 {
+  color: #FDEDF0;
+  font-family: "grover-slab", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 17px;
+  text-align: center;
+  text-shadow: 0 0 5px #5E0818;
+}
+
+h3 {
+  color: #AD5C8D;
+  font-family: "grover-slab", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 22px;
+  margin-top: -5px;
+  text-align: center;
+  text-shadow: 0 0 4px #FFFFFF
+}
+
+.top {
+  text-align: center;
+  margin-bottom: -20px;
+  padding: 25px;
+}
+
+.overlay{
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+ }
+}
+
+.toptext {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.top:hover .overlay {
+  opacity: 1;
 }
 
 .content {
@@ -31,9 +83,6 @@ footer{
 
 .left-text, .right-text {
   flex: 1;
-  box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
   padding: 10px;
 }
 
@@ -44,18 +93,17 @@ footer{
   justify-content: space-around;
   align-items: flex-start;
   margin: 20px;
-  margin-top: 45px;
-  margin-right: -160px;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .center-image {
   flex: 0 0 40%; 
-  margin: -10px;
   transition: transform 0.3s ease-in-out;
 }
 
 .center-image:hover {
-  transform: scale(1.12);
+  transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
@@ -74,98 +122,102 @@ footer{
   }
 }
 
-.t1 {
-  color: white;
-  font-family: "meatball", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 25px;
-  margin-top: 20px;
-  text-align: center;
+.center-image {
+  position: relative;
 }
 
-h3{
-  color: white;
+.center-image::before {
+  content: "choose me!";
+  position: absolute;
+  color: #ED5A7C;
   font-family: "grover-slab", serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 19px;
+  font-size: 13px;
   margin-top: -5px;
   text-align: center;
-}
-
-.top {
-  text-align: center;
-  margin-bottom: -10px;
-}
-
-.overlay{
-  position: absolute;
-  top: 20%;
+  background-color: #FDECF0;
+  border-radius: 10px;
+  padding: 10px;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
+  opacity: 0; 
   transition: opacity 0.3s ease-in-out;
- }
 }
 
-.top-text {
-  color: white;
-  font-family: "meatball", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 13px;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.top:hover .overlay{
+.center-image:hover::before {
   opacity: 1;
 }
 
-.content{
+.center-image + .center-image::before {
+  content: "choose me!";
+  opacity: 0;
+}
 
+.center-image + .center-image:hover::before {
+  opacity: 1;
+}
+
+.content {
+  margin-top: 25px;
 }
 
 p:hover {
-  background-color: #FCA4B0;
-  padding: 10px;
+  background-color: #C791C0;
+  padding: 20px;
+  color: white;
   text-shadow: 0 0 3px #B71540;
+  border-radius: 30px;
 }
 
-.left-text{
+.left-text {
   text-align: left;
-  color: white;
+  color: #703354;
   position: relative;
   width: 450px;
   height: auto;
+  margin-left: 40px;
   font-family: "grover-slab", serif;
   font-weight: 600;
   font-style: normal;
   font-size: 13px;
-  line-height: 1.6;
+  line-height: 2;
+  letter-spacing: -0.6px;
+  word-spacing: 1.5px;
+  text-shadow: 0 0 10px #FFFFFF;
 }
 
-.right-text{
+.right-text {
+  color: #703354;
   text-align: right;
-  color: white;
   position: relative;
   width: 450px;
   height: auto;
+  margin-right: 40px;
   font-family: "grover-slab", serif;
   font-weight: 600;
   font-style: normal;
   font-size: 13px;
-  line-height: 1.6;
+  line-height: 2;
+  letter-spacing: -0.6px;
+  word-spacing: 1.5px;
+  text-shadow: 0 0 10px #FFFFFF;
 }
 
-a{
+footer {
+  text-align: center;
+  font-size: 13px;
+  padding: 10px;
+  background-color: #C791C0;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+a {
   font-family: "grover-slab", serif;
   font-weight: 600;
   font-style: normal;
+  line-height: 1.6;
 }
