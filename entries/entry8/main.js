@@ -16,3 +16,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('mainImage').addEventListener('click', changeImage);
 });
+

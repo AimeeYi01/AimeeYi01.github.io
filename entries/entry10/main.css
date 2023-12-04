@@ -40,6 +40,20 @@ body {
   text-shadow: 0 0 10px #FFD6ED;
 }
 
+h2 {
+  font-family: "brevia", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 24px;
+  margin-left: 40px;
+  margin-top: -35px;
+  line-height: 1.7;
+  word-spacing: 1.3px;
+  letter-spacing: -0.3px;
+  color: #AD6CD9;
+  text-shadow: 0 0 10px #FD9BD4;
+}
+
 #togglebutton {
   margin-top: 40px;
   margin-left: 40px;
@@ -58,6 +72,7 @@ body {
 #content {
   width: 60%;
   margin: 40px;
+  margin-top: 30px;
   margin-bottom: 60px;
 }
 
@@ -93,9 +108,9 @@ p {
   font-family: "brevia", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 22px;
+  font-size: 24px;
   color: #FB23A1;
-  text-shadow: 0 0 10px #FFFFFF;
+  text-shadow: 0 0 15px #FFFFFF;
 }
 
 @keyframes scroll {
