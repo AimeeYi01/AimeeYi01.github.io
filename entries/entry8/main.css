@@ -7,11 +7,8 @@ body {
 
 img {
 	text-align: center;
-	height: auto;
-
-
 	cursor: pointer;
-	margin-top: 50px;
+	margin-top: 40px;
 	display: block;
   margin-left: auto;
   margin-right: auto;
@@ -19,7 +16,7 @@ img {
 }
 
 .ri {
-  width: 90%;
+  width: 80%;
   height: auto; 
   display: block;
   margin-left: auto;
@@ -27,14 +24,13 @@ img {
 }
 
 #mainImage {
-  max-width: 100%;
   height: auto;
+  max-height: 450px;
+  width: auto;
 }
 
-
-
 h1 {
-	margin-top: 35px;
+	margin-top: 25px;
 	text-align: center;
 	font-family: "eight", sans-serif;
   font-weight: 300;
@@ -48,7 +44,7 @@ h3 {
   font-weight: 700;
   font-style: normal;
   color: #FCD79F;
-  font-size: 25px;
+  font-size: 26px;
   margin-top: -15px;
   text-align: center;
 }
@@ -60,16 +56,16 @@ h3 {
   font-style: normal;
   font-size: 16px;
   color: #FDF0CE;
-  max-width: 720px;
-  line-height: 1.8;
+  max-width: 760px;
+  line-height: 1.9;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .click {
-	margin-top: 60px;
+	margin-top: 50px;
 	text-align: center;
 	font-family: "puffin-display-soft", sans-serif;
   font-weight: 800;
@@ -99,7 +95,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 .image-container {
@@ -108,21 +104,17 @@ a {
   align-items: center; 
 }
 
-
-
-
 .image {
   width: 200px; 
   height: auto; 
   opacity: 0; 
   margin: 20px;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
 .image-container:hover .image:hover {
   opacity: 1; 
 }
-
 
 @media (max-width: 768px) {
   .container {
@@ -138,6 +130,11 @@ a {
     width: 40%;
     margin: 10px;
   }
+
+  #mainImage {
+    max-width: 80%;
+
+}
 
   .text {
     margin-left: 40px;
