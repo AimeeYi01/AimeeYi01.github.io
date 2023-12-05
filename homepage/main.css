@@ -64,7 +64,11 @@ a:hover {
 #text3 { top: 300px; left: 600px; }
 #text4 { top: 400px; left: 1000px; }
 #text5 { top: 500px; left: 700px; }
-#text6 { top: 600px; left: 350px; }
+#text6 { top: 650px; left: 350px; }
+#text7 { top: 800px; left: 450px; }
+#text8 { top: 600px; left: 550px; }
+#text9 { top: 700px; left: 200px; }
+#text10 { top: 800px; left: 150px; }
 
 @media screen and (max-width: 768px) {
   .ordered-text {
