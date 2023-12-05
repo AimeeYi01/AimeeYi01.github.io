@@ -131,3 +131,65 @@ a {
   font-style: normal;
   line-height: 1.5;
 }
+
+@media only screen and (max-width: 768px) {
+
+.flex-container {
+  flex-direction: column;
+}
+
+.flex-left {
+  max-width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+
+.flex-right {
+  margin-top: 15px;
+}
+
+.flip-box {
+  margin-top: 15px;
+}
+
+footer {
+  margin-top: 15px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+.flex-left {
+  max-width: 50%;
+  margin: 0;
+  padding: 10px;
+}
+
+.flex-right {
+  margin-top: 35px;
+}
+
+footer {
+  margin-top: 35px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+
+.flex-container {
+  flex-direction: row;
+}
+
+.flex-left {
+  max-width: 670px;
+  margin: 5px 55px 5px 110px;
+}
+
+.flex-right {
+  margin-top: 85px;
+}
+
+footer {
+  margin-top: 40px;
+  }
+}
