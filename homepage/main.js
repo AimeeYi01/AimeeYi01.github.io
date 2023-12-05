@@ -1,1 +1,1 @@
-console.log('hello');
+console.log('Welcome! In this collection, you will see some fragments of my childhood memories, and I hope you can resonate with me.');
