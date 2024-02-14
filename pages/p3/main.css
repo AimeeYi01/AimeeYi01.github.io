@@ -1,0 +1,99 @@
+
+body{
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: visible;
+}
+
+.element {
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.element .div {
+    background-color: #000000;
+    overflow: hidden;
+    width: 1512px;
+    height: 982px;
+    position: relative;
+}
+
+.element .rectangle {
+    position: absolute;
+    width: 314px;
+    height: 647px;
+    top: 132px;
+    left: 756px;
+    border-radius: 4px;
+    box-shadow: inset 10px 4px 10px #00000040;
+    filter: blur(5px);
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(217, 217, 217, 0) 100%);
+    opacity: 0.98;
+}
+
+.element .overlap-group {
+    position: absolute;
+    width: 425px;
+    height: 1016px;
+    top: -3px;
+    left: 1087px;
+}
+
+.element .img {
+    position: absolute;
+    width: 425px;
+    height: 982px;
+    top: 3px;
+    left: 0;
+}
+
+.element .rectangle-2 {
+    position: absolute;
+    width: 7px;
+    height: 864px;
+    top: 26px;
+    left: 100px;
+    background-color: #000000;
+    filter: blur(4px);
+}
+
+.element .rectangle-3 {
+    position: absolute;
+    width: 7px;
+    height: 1016px;
+    top: 0;
+    left: 243px;
+    background-color: #000000;
+    border: 1px solid;
+    filter: blur(4px);
+}
+
+.element .rectangle-4 {
+    position: absolute;
+    width: 314px;
+    height: 216px;
+    top: 842px;
+    left: 756px;
+    filter: blur(40px);
+    background: linear-gradient(180deg, rgb(217, 217, 217) 0%, rgba(217, 217, 217, 0) 100%);
+    opacity: 0.7;
+}
+
+.element .and-so-it-has-come {
+    position: absolute;
+    width: 507px;
+    top: 98px;
+    left: 128px;
+    font-family: "BIZ UDPMincho-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: justify;
+    letter-spacing: 0.18px;
+    line-height: 28px;
+}
