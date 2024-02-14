@@ -7,6 +7,11 @@ body{
     overflow: visible;
 }
 
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .element {
 
     display: flex;
@@ -94,8 +99,8 @@ body{
     white-space: nowrap;
     position: absolute;
     font-family: "biz-udpmincho", sans-serif;
-font-weight: 400;
-font-style: normal;
+    font-weight: 400;
+    font-style: normal;
     letter-spacing: 0;
     line-height: normal;
   }
@@ -108,8 +113,14 @@ font-style: normal;
     font-size: 48px;
     position: absolute;
     font-family: "biz-udpmincho", sans-serif;
-font-weight: 400;
-font-style: normal;
+    font-weight: 400;
+    font-style: normal;
     letter-spacing: 0;
     line-height: normal;
   }
+
+.links {
+  color: white;
+  text-align: center;
+  letter-spacing: 5px 
+}
