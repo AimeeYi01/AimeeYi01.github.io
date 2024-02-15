@@ -14,36 +14,30 @@
 
 .element .overlap-group {
     position: relative;
-    width: 1059px;
-    height: 768px;
-    top: 9px;
-    left: 133px;
+    height: 982px;
 }
 
 .element .ellipse {
     position: absolute;
-    width: 784px;
-    height: 768px;
+    width: 1109px;
+    height: 976px;
     top: 0;
     left: 0;
 }
 
-.element .div {
+.element .img {
     position: absolute;
-    width: 345px;
-    height: 345px;
-    top: 339px;
-    left: 714px;
-    background-color: #000000;
-    border-radius: 172.5px;
-    filter: blur(200px);
+    width: 995px;
+    height: 894px;
+    top: 88px;
+    left: 517px;
 }
 
 .element .text-wrapper {
     position: absolute;
     width: 362px;
-    top: 202px;
-    left: 228px;
+    top: 211px;
+    left: 361px;
     opacity: 0.9;
     font-family: "BIZ UDPMincho-Regular", Helvetica;
     font-weight: 400;
@@ -57,8 +51,8 @@
 .element .there-are-no-doubt {
     position: absolute;
     width: 329px;
-    top: 362px;
-    left: 730px;
+    top: 371px;
+    left: 863px;
     opacity: 0.85;
     font-family: "BIZ UDPMincho-Regular", Helvetica;
     font-weight: 400;
@@ -68,3 +62,4 @@
     letter-spacing: 0.13px;
     line-height: 32px;
 }
+
