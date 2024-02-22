@@ -1,23 +1,168 @@
 body{
-    background-color: #000000;
+    background-color: black;
     margin: 0;
     padding: 0;
     height: 100vh;
     overflow: visible;
 }
 
-// And surely you have seen, in the darkness of the innermost rooms of these huge buildings, to which sunlight never penetrates, how the gold leaf of a sliding door or screen will pick up a distant glimmer from the garden, then suddenly send forth an ethereal glow, a faint golden light cast into the enveloping darkness, like the glow upon the horizon at sunset. In no other setting is gold quite so exquisitely beautiful. You walk past, turning to look again, and yet again; and as you move away the golden surface of the paper glows ever more deeply, changing not in a flash, but growing slowly, steadily brighter, like color rising in the face of a giant. Or again you may find that the gold dust of the background, which until that moment had only a dull, sleepy luster, will, as you move past, suddenly gleam forth as if it had burst into flame.
-color: #FFF7E4;
- font-size: 14px;
- font-family: BIZ UDPMincho;
- font-weight: 400;
- line-height: 24px;
- word-wrap: break-word
----
-// How, in such a dark place, gold draws so much light to itself is a mystery to me. But I see why in ancient times statues of the Buddha were gilt with gold and why gold leaf covered the walls of the homes of the nobility. Modem man, in his well-lit house, knows nothing of the beauty of gold; but those who lived in the dark houses of the past were not merely captivated by its beauty, they also knew its practical value; for gold, in these dim rooms, must have served the function of a reflector. Their use of gold leaf and gold dust was not mere extravagance. Its reflective properties were put to use as a source of illumination. Silver and other metals quickly lose their gloss, but gold retains its brilliance indefinitely to light the darkness of the room. This is why gold was held in such incredibly high esteem.
-color: #FFF7E4;
- font-size: 14px;
- font-family: BIZ UDPMincho;
- font-weight: 400;
- line-height: 24px;
- word-wrap: break-word
+.element {
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .div {
+    background-color: transparent;
+    width: 1512px;
+    height: 982px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .text-wrapper {
+    position: absolute;
+    width: 474px;
+    top: 443px;
+    left: 188px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff7e3;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  
+  .p {
+    position: absolute;
+    width: 474px;
+    top: 203px;
+    left: 851px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff7e3;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  
+  .element .next {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 921px;
+    left: 1452px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 30px;
+    white-space: nowrap;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+ }
+
+  .background {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: absolute;
+    top: 0; 
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .background span {
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 20vmin;
+    
+    backface-visibility: visible;
+    position: absolute;
+    animation-name: move;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .background span:nth-child(1) {
+    color: #C46A08;
+    top: 47%;
+    left: 10%;
+    animation-duration: 10.5s;
+    animation-delay: -12.6s;
+    transform-origin: 0vw -9vh;
+    box-shadow: -40vmin 0 11.2034042917vmin rgba(196, 106, 8, 0.2);
+  }
+
+  .background span:nth-child(2) {
+    color: #F4AF28;
+    top: 33%;
+    left: 45%;
+    animation-duration: 13.2s;
+    animation-delay: -15.6s;
+    transform-origin: 14vw 17vh;
+    box-shadow: 40vmin 0 10.2115006212vmin rgba(244, 175, 40, 0.2);
+  }
+
+  .background span:nth-child(3) {
+    color: #F4AF28;
+    top: 90%;
+    left: 55%;
+    animation-duration: 14.8s;
+    animation-delay: -3.5s;
+    transform-origin: -18vw 9vh;
+    box-shadow: -40vmin 0 12.3544421218vmin rgba(244, 175, 40, 0.2);
+  }
+
+  .background span:nth-child(4) {
+    color: #F4AF28;
+    top: 7%;
+    left: 88%;
+    animation-duration: 15.4s;
+    animation-delay: -2.6s;
+    transform-origin: 21vw 14vh;
+    box-shadow: -40vmin 0 5.9226682716vmin rgba(244, 175, 40, 0.2);
+  }
+
+  .background span:nth-child(5) {
+    color: #C46A08;
+    top: 65%;
+    left: 26%;
+    animation-duration: 15.3s;
+    animation-delay: -6s;
+    transform-origin: 9vw -23vh;
+    box-shadow: 40vmin 0 5.4289289226vmin rgba(196, 106, 8, 0.2);
+  }
+
+  .background span:nth-child(6) {
+    color: #F4AF28;
+    top: 45%;
+    left: 30%;
+    animation-duration: 11.2s;
+    animation-delay: -6.6s;
+    transform-origin: -3vw 23vh;
+    box-shadow: -40vmin 0 14.4480182393vmin rgba(244, 175, 40, 0.2);
+  }
+
+
+  
+  @keyframes move {
+    100% {
+      transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+  }
