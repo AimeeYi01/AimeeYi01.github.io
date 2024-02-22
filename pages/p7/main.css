@@ -1,31 +1,138 @@
 body{
-    background-color: #000000;
+    background-color: black;
     margin: 0;
     padding: 0;
     height: 100vh;
     overflow: visible;
 }
 
-// I blink in uncertainty at this dreamlike luminescence, feeling as though some misty film were blunting my vision. The light from the pale white paper, powerless to dispel the heavy darkness of the alcove, is instead repelled by the darkness, creating a world of confusion where dark and light are indistinguishable. 
-color: #171717;
- font-size: 16px;
- font-family: BIZ UDPMincho;
- font-weight: 400;
- line-height: 22px;
- word-wrap: break-word
----
-// In temple architecture the main room stands at a considerable distance from the garden; so dilute is the light there that no matter what the season, on fair days or cloudy, morning, midday, or evening, the pale, white glow scarcely varies. And the shadows at the interstices of the ribs seem strangely immobile, as if dust collected in the corners had become a part of the paper itself. 
-color: #191919;
- font-size: 16px;
- font-family: Clarendon BT;
- font-weight: 400;
- line-height: 22px;
- word-wrap: break-word
----
-// Have not you yourselves sensed a difference in the light that suffuses such a room, a rare tranquility not found in ordinary light? Have you never felt a sort of fear in the face of the ageless, a fear that in that room you might lose all consciousness of the passage of time, that untold years might pass and upon emerging you should find you had grown old and gray?
-color: #191919;
- font-size: 16px;
- font-family: BIZ UDPMincho;
- font-weight: 400;
- line-height: 22px;
- word-wrap: break-word
+.element {
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+.div {
+    background-color: #000000;
+    overflow: hidden;
+    width: 1512px;
+    height: 982px;
+    position: relative;
+  }
+  
+.overlap {
+    width: 1330px;
+    top: -194px;
+    left: 30px;
+    position: absolute;
+    height: 1359px;
+  }
+  
+.overlap-group {
+    width: 1208px;
+    top: 0;
+    left: 122px;
+    position: absolute;
+    height: 1359px;
+  }
+  
+.overlap-group-2 {
+    width: 772px;
+    top: 0;
+    left: 218px;
+    position: absolute;
+    height: 1359px;
+  }
+  
+.rectangle {
+    position: absolute;
+    width: 270px;
+    height: 1360px;
+    top: 0;
+    left: 251px;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    transform: rotate(22.62deg);
+    filter: blur(40px);
+    opacity: 0.8;
+  }
+  
+.p2 {
+    position: absolute;
+    width: 300px;
+    top: 848px;
+    left: 236px;
+    -webkit-text-stroke: 0.1px #181818;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #181818;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px;
+  }
+  
+.p1 {
+    position: absolute;
+    width: 300px;
+    top: 379px;
+    left: 0;
+    -webkit-text-stroke: 0.1px #181818;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #181818;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px;
+  }
+  
+ .p3 {
+    position: absolute;
+    width: 300px;
+    top: 535px;
+    left: 908px;
+    -webkit-text-stroke: 0.1px #181818;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #181818;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px;
+  }
+  
+  .barcontain {
+    position: absolute;
+    width: 320px; 
+    height: 3px; 
+    top: 223px;
+    left: 0;
+    background-color: #ffffff !important; 
+    opacity: 0.9; 
+}
+  
+.next {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 921px;
+    left: 1452px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 30px;
+    white-space: nowrap;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+ }

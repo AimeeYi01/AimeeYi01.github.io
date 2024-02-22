@@ -1,85 +1,139 @@
-.element {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: visible;
 }
 
-.element .div {
-    background-color: #ffffff;
-    width: 1512px;
-    height: 982px;
-    position: relative;
-}
-
-.element .overlap {
-    left: 172px;
-    filter: blur(3px);
-    background: linear-gradient(180deg, rgb(0.15, 0.15, 0.15) 0%, rgba(217, 217, 217, 0) 100%);
+.rec1 {
+    width: 360px; 
+    height: 820px; 
+    left: 171px; 
+    top: 81px; 
     position: absolute;
-    width: 359px;
-    height: 821px;
-    top: 80px;
-    border-radius: 3px;
+    background: linear-gradient(180deg, #000000 0%, rgba(217, 217, 217, 0) 100%);  
+    border-radius: 3px; 
+    filter: blur(2px)
 }
 
-.element .text-wrapper {
-    position: absolute;
-    width: 305px;
-    top: 29px;
-    left: 27px;
-    font-family: "BIZ UDPMincho-Regular", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 14px;
-    text-align: justify;
-    letter-spacing: 0;
-    line-height: 26px;
+.rec3 {
+    width: 360px; 
+    height: 820px; 
+    left: 981px; 
+    top: 81px; 
+    position: absolute; 
+    background: linear-gradient(180deg, #000000 0%, rgba(217, 217, 217, 0) 100%);  
+    border-radius: 3px; 
+    filter: blur(2px)
 }
 
-.element .overlap-group {
-    left: 982px;
-    filter: blur(3px);
-    background: linear-gradient(180deg, rgb(0.15, 0.15, 0.15) 0%, rgba(217, 217, 217, 0) 100%);
-    position: absolute;
-    width: 359px;
-    height: 821px;
-    top: 80px;
-    border-radius: 3px;
+.rec2 {
+    width: 360px; 
+    height: 820px; 
+    left: 936px; 
+    top: 901px; 
+    position: absolute; 
+    transform: rotate(-180deg); 
+    transform-origin: 0 0; 
+    background: linear-gradient(180deg, #000000 0%, rgba(217, 217, 217, 0) 100%);
+    border-radius: 3px; 
+    filter: blur(2px)
 }
 
-.element .overlap-group-2 {
-    left: 576px;
-    position: absolute;
-    width: 359px;
-    height: 821px;
-    top: 80px;
-    border-radius: 3px;
+.rec1,
+.rec2,
+.rec3 {
+    border: 2px solid white; 
+    border-radius: 3px; 
+    transition: border-color 0.2s ease, filter 0.2s ease; 
 }
 
-.element .rectangle {
-    position: absolute;
-    width: 359px;
-    height: 821px;
-    top: 0;
-    left: 0;
-    border-radius: 3px;
-    transform: rotate(-179.98deg);
-    filter: blur(3px);
-    background: linear-gradient(180deg, rgb(0.15, 0.15, 0.15) 0%, rgba(217, 217, 217, 0) 100%);
+.rec1:hover,
+.rec2:hover,
+.rec3:hover {
+    border-color: black;
+    filter: blur(0px);  
 }
 
-.element .for-the-beauty-of {
-    position: absolute;
-    width: 305px;
-    top: 392px;
-    left: 28px;
-    font-family: "BIZ UDPMincho-Regular", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 14px;
-    text-align: justify;
-    letter-spacing: 0;
-    line-height: 26px;
+.p3 {
+    width: 295px; 
+    height: 495px; 
+    left: 1014px; 
+    top: 127px; 
+    position: absolute; 
+    color: white; 
+    
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 24px; 
+    word-wrap: break-word;
 }
+
+.p2 {
+    width: 295px; 
+    height: 384px; 
+    left: 609px; 
+    top: 541px;
+    position: absolute; 
+    color: white; 
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 24px; 
+    word-wrap: break-word;
+}
+
+.p1 {
+    
+    width: 295px; 
+    height: 216px; 
+    left: 204px; 
+    top: 127px; 
+    position: absolute; 
+    color: white; 
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-size: 12px; 
+    line-height: 24px; 
+}
+
+.next {
+    width: 30px; 
+    height: 30px; 
+    left: 1452px; 
+    top: 902px; 
+    position: absolute; 
+    text-align: center; 
+    color: black; 
+    font-size: 25px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400; 
+    line-height: 30px; 
+    word-wrap: break-word;  
+}
+
+p {
+    text-shadow: 0 0 5px white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+.rec1, .rec2, .rec3 {
+    animation: fadeIn 3s ease; 
+}
+

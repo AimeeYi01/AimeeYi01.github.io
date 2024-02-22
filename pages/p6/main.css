@@ -1,25 +1,90 @@
 body{
-    background-color: #292929;
+    background-color: #202020;
     margin: 0;
     padding: 0;
     height: 100vh;
     overflow: visible;
 }
 
-// This was the genius of our ancestors, that by cutting off the light from this empty space they imparted to the world of shadows that formed there a quality of mystery and depth superior to that of any wall painting or ornament. The technique seems simple, but was by no means so simply achieved. We can imagine with little difficulty what extraordinary pains were taken with each invisible detail-the placement of the window in the shelving recess, the depth of the crossbeam, the height of the threshold. But for me the most exquisite touch is-the pale white glow of the shoji in the study bay; I need only pause before it and I forget the passage of time.
-color: black;
- font-size: 12px;
- font-family: BIZ UDPMincho;
- font-weight: 400;
- line-height: 25px;
- letter-spacing: 0.12px;
- word-wrap: break-word
----
-// The study bay, as the name suggests, was originally a projecting window built to provide a place for reading. Over the years it came to be regarded as no more than a source of light for the alcove; but most often it serves not so much to illuminate the alcove as to soften the sidelong rays from without, to filter them through paper panels. There is a cold and desolate tinge to the light by the time it reaches these panels. The little sunlight from the garden that manages to make its way beneath the eaves and through the corridors has by then lost its power to illuminate, seems drained of the complexion of life. It can do no more than accentuate the whiteness of the paper. I sometimes linger before these panels and study the surface of the paper, bright, but giving no impression of brilliance.
-color: black;
- font-size: 12px;
- font-family: BIZ UDPMincho;
- font-weight: 400;
- line-height: 25px;
- letter-spacing: 0.12px;
- word-wrap: break-word
+.element {
+    background-color: #202020;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .div {
+    background-color: #202020;
+    width: 1512px;
+    height: 982px;
+    position: relative;
+  }
+  
+  .group {
+    position: absolute;
+    width: 1036px;
+    height: 982px;
+    top: 0;
+    left: 0;
+   
+    background-size: 100% 100%;
+  }
+  
+ .text {
+    position: absolute;
+    width: 630px;
+    height: 470px;
+    top: 309px;
+    left: 170px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  
+ .button {
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    top: 257px;
+    left: 1205px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    text-shadow: 0 0 2px white;
+    border: 1px solid white; 
+    line-height: 40px; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 40px;
+ }
+  
+.next {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 921px;
+    left: 1452px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 30px;
+    white-space: nowrap;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+ }

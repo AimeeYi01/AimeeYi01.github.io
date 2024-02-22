@@ -1,23 +1,141 @@
-// Of course the Japanese room does have its picture alcove, and in it a hanging scroll and a flower arrangement. But the scroll and the flowers serve not as ornament but rather to give depth to the shadows. We value a scroll above all for the way it blends with the walls of the alcove, and thus we consider the mounting quite as important as the calligraphy or painting. Even the greatest masterpiece will lose its worth as a scroll if it fails to blend with the alcove, while a work of no particular distinction may blend beautifully with the room and set off to unexpected advantage both itself and its surroundings. Wherein lies the power of an otherwise ordinary work to produce such an effect? Most often the paper, the ink, the fabric of the mounting will possess a certain look of antiquity, and this look of antiquity will strike just the right balance with the darkness of the alcove and room.
-color: black;
- font-size: 13px;
- font-family: BIZ UDPMincho;
- font-weight: 400;
- line-height: 24px;
- word-wrap: break-word
----
-// For the painting here is nothing more than another delicate surface upon which the faint, frail light can play; it performs precisely the same function as the sand-textured wall. This is why we attach such importance to age and patina. A new painting, even one done in ink monochrome or subtle pastels, can quite destroy the shadows of an alcove, unless it is selected with the greatest care.
-color: black;
- font-size: 13px;
- font-family: BIZ UDPMincho;
- font-weight: 400;
- line-height: 24px;
- word-wrap: break-word
----
-// We have all had the experience, on a visit to one of the great temples of Kyoto or Nara, of being shown a scroll, one of the temple's treasures, hanging in a large, deeply recessed alcove. So dark are these alcoves, even in bright daylight, that we can hardly discern the outlines of the work; all we can do is listen to the explanation of the guide, follow as best we can the all-but invisible brush strokes, and tell ourselves how magnificent a painting it must be. Yet the combination of that blurred old painting and the dark alcove is one of absolute harmony. The lack of clarity, far from disturbing us, seems rather to suit the painting perfectly.
-color: black;
- font-size: 13px;
- font-family: BIZ UDPMincho;
- font-weight: 400;
- line-height: 24px;
- word-wrap: break-word
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: visible;
+}
+
+.element {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+ .div {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 1512px;
+    height: 982px;
+    position: relative;
+  }
+  
+  .group {
+    position: absolute;
+    width: 726px;
+    height: 1408px;
+    top: -156px;
+    left: -250px;
+  }
+  
+ .rectangle {
+    position: absolute;
+    width: 593px;
+    height: 1408px;
+    top: 0;
+    left: 0;
+    background-color: #676767cc;
+    border: 1px solid;
+    border-color: #000000;
+    transform: rotate(-180deg);
+    filter: blur(250px);
+    opacity: 0.8;
+  }
+  
+.rec1 {
+    position: absolute;
+    width: 328px;
+    height: 653px;
+    top: 320px;
+    left: 398px;
+  }
+  
+.rec2 {
+    position: absolute;
+    width: 153px;
+    height: 503px;
+    top: 317px;
+    left: 486px;
+    opacity: 0.3;
+    transition: opacity 0.4s ease; 
+}
+
+.rec2:hover {
+    opacity: 0.9; 
+}
+
+
+.p1 {
+    position: absolute;
+    width: 325px;
+    top: 186px;
+    left: 663px;
+    -webkit-text-stroke: 0.12px #000000;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 23px;
+}
+  
+.p2 {
+    position: absolute;
+    width: 692px;
+    top: 697px;
+    left: 663px;
+    -webkit-text-stroke: 0.12px #000000;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 23px;
+}
+  
+.p3 {
+    position: absolute;
+    width: 320px;
+    top: 301px;
+    left: 1055px;
+    -webkit-text-stroke: 0.12px #000000;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 23px;
+}
+  
+.next {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 29px;
+    left: 1452px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 30px;
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.p1:hover, .p2:hover, .p3:hover {
+    text-shadow: 6px 0px #C2C2C2
+    ;
+}
+  
