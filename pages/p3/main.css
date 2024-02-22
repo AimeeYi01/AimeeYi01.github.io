@@ -1,4 +1,3 @@
-
 body{
     background-color: #000000;
     margin: 0;
@@ -13,98 +12,106 @@ body{
     flex-direction: row;
     justify-content: center;
     width: 100%;
-}
-
-.element .div {
+  }
+  
+.div {
     background-color: #000000;
     overflow: hidden;
     width: 1512px;
     height: 982px;
     position: relative;
 }
-
-.element .rectangle {
+  
+.rectangle1 {
     position: absolute;
-    width: 314px;
-    height: 647px;
-    top: 132px;
-    left: 756px;
-    border-radius: 4px;
-    box-shadow: inset 10px 4px 10px #00000040;
-    filter: blur(5px);
-    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(217, 217, 217, 0) 100%);
-    opacity: 0.98;
-}
-
-
-
-
-.element .rectangle-2 {
+    width: 324px;
+    height: 660px;
+    top: 126px;
+    left: 751px;
+  }
+  
+.rectangle2 {
     position: absolute;
     width: 314px;
     height: 216px;
-    top: 842px;
+    top: 844px;
     left: 756px;
     filter: blur(40px);
     background: linear-gradient(180deg, rgb(217, 217, 217) 0%, rgba(217, 217, 217, 0) 100%);
     opacity: 0.7;
-}
-
-.element .component {
+  }
+  
+.component {
     position: absolute;
     width: 541px;
     height: 1324px;
     top: -140px;
     left: 1095px;
+    opacity: 0.95;
 }
-
-.element .overlap-group {
+  
+.group {
     position: relative;
     width: 425px;
     height: 1016px;
     top: 137px;
     left: -8px;
-}
-
-.element .img {
+  }
+  
+.window {
     position: absolute;
     width: 425px;
     height: 982px;
     top: 3px;
     left: 0;
 }
-
-.element .rectangle-3 {
+ 
+.text {
     position: absolute;
-    width: 7px;
-    height: 864px;
-    top: 26px;
-    left: 100px;
-    background-color: #000000;
-    filter: blur(4px);
-}
-
-.element .rectangle-4 {
-    position: absolute;
-    width: 7px;
-    height: 1016px;
-    top: 0;
-    left: 243px;
-    background-color: #000000;
-    border: 1px solid;
-    filter: blur(4px);
-}
-
-.element .and-so-it-has-come {
-    position: absolute;
-    width: 507px;
-    top: 98px;
-    left: 128px;
-    font-family: "BIZ UDPMincho-Regular", Helvetica;
-    font-weight: 400;
+    width: 535px;
+    top: 152px;
+    left: 95px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
     color: #ffffff;
     font-size: 12px;
-    text-align: justify;
-    letter-spacing: 0.18px;
-    line-height: 28px;
+    letter-spacing: 0;
+    line-height: 27px;
+}
+
+.next {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 921px;
+    left: 30px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 30px;
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+    .rectangle1,
+    .rectangle2,
+    .window {
+    animation: fadeIn 5s ease-in-out forwards;
+    opacity: 0; 
 }

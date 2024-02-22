@@ -1,28 +1,85 @@
-// I possess no specialized knowledge of architecture, but I understand that in the Gothic cathedral of the West, the roof is thrust up and up so as to place its pinnacle as high in the heavens as possible-and that herein is thought to lie its special beauty. <br/>
-color: black;
- font-size: 16px;
- font-family: BIZ UDPMincho;
- font-weight: 400;
- line-height: 36px;
- word-wrap: break-word
----
-// <br/><br/>
-color: #7B7B7B;
- font-size: 16px;
- font-family: BIZ UDPMincho;
- font-weight: 400;
- line-height: 36px;
- word-wrap: break-word
----
-// In the temples of Japan, on the other hand, a roof of heavy tiles is first laid out, and in the deep, spacious shadows created by the eaves the rest of the structure is built. Nor is this true only of temples; in the palaces of the nobility and the houses of the common people, what first strikes the eye is the massive roof of tile or thatch and the heavy darkness that hangs beneath the eaves. Even at midday cavernous darkness spreads over all beneath the roof's edge, making entryway, doors, walls, and pillars all but invisible. The grand temples of Kyoto-Chion'in, Honganji-and the farmhouses of the remote countryside are alike in this respect: like most buildings of the past their roofs give the impression of possessing far greater weight, height, and surface than all that stands beneath the eaves. <br/>
-color: #DADADA;
- font-size: 16px;
- font-family: BIZ UDPMincho;
- font-weight: 400;
- line-height: 36px;
- word-wrap: break-word
+body{
+   background-color: white;
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   overflow: clip;
+}
 
- a {
-    color: white
-    text-align: center;
- }
+.shadow {
+   width: 1820px; 
+   height: 830px; 
+   left: -160px; 
+   top: 370px; 
+   position: absolute; 
+   mix-blend-mode: darken; 
+   background: #191919; 
+   box-shadow: 200px 200px 200px; 
+   filter: blur(200px);
+   animation: moveShadow 5s forwards; 
+}
+
+@keyframes moveShadow {
+   from {
+     top: 830px; 
+   }
+   to {
+     top: 370px; 
+   }
+}
+
+.p2 {
+   width: 635px; 
+   height: 300px; 
+   left: 439px; 
+   top: 441px; 
+   position: absolute; 
+   color: #E0E0E0; 
+   font-size: 14px; 
+   font-family: "BIZ UDPMincho", serif;
+   font-style: normal;
+   font-weight: 400; 
+   line-height: 30px; 
+   word-wrap: break-word;
+}
+
+.p1 {
+   width: 635px; 
+   height: 100px; 
+   left: 439px; 
+   top: 241px; 
+   position: 
+   absolute; 
+   color: black; 
+   font-size: 14px; 
+   font-family: "BIZ UDPMincho", serif;
+   font-style: normal;
+   font-weight: 900; 
+   line-height: 30px; 
+   word-wrap: break-word;
+}
+
+.next {
+   width: 30px; 
+   height: 30px; 
+   left: 1452px; 
+   top: 30px; 
+   position: absolute; 
+   text-align: center; 
+   color: black; 
+   font-size: 25px; 
+   font-family: "BIZ UDPMincho", serif;
+   font-style: normal;
+   font-weight: 400; 
+   line-height: 30px; 
+   word-wrap: break-word;
+}
+
+a {
+   text-decoration: none;
+   color: black;
+}
+
+
+
+ 

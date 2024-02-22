@@ -127,3 +127,10 @@ body {
   font-size: 16px;
   font-weight: 400;
   word-wrap: break-word
+
+
+.transparent {
+    width: auto;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5)
+}

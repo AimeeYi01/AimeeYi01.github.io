@@ -1,65 +1,115 @@
+body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: visible;
+}
+
 .element {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    overflow: visible;
 }
-
-.element .overlap-group-wrapper {
+  
+.wrap {
     background-color: #ffffff;
     width: 1512px;
     height: 982px;
+    overflow: visible;
 }
-
-.element .overlap-group {
+  
+.group {
     position: relative;
-    height: 982px;
+    height: 100%;
+    overflow: visible;
 }
-
-.element .ellipse {
-    position: absolute;
-    width: 1109px;
-    height: 976px;
+  
+.e1 {
+    width: 1059px;
     top: 0;
     left: 0;
+    position: absolute;
+    height: 932px;
+    transition: transform 0.5s ease;
+    transform-origin: center;
+    max-width: 100%; 
+    height: auto; 
+    opacity: 0.95;
+}
+  
+.e2 {
+    width: 1048px;
+    top: 50px;
+    left: 464px;
+    position: absolute;
+    height: 932px;
+    transition: transform 0.5s ease;
+    transform-origin: center; 
+    max-width: 100%; 
+    height: auto;
+    opacity: 0.95;
+}
+  
+.e1, .e2 {
+    transform: scale(0.32); 
 }
 
-.element .img {
-    position: absolute;
-    width: 995px;
-    height: 894px;
-    top: 88px;
-    left: 517px;
+.e1:hover, .e2:hover {
+    transform: scale(1); 
 }
 
-.element .text-wrapper {
+.p2 {
     position: absolute;
-    width: 362px;
-    top: 211px;
-    left: 361px;
-    opacity: 0.9;
-    font-family: "BIZ UDPMincho-Regular", Helvetica;
-    font-weight: 400;
+    width: 325px;
+    top: 443px;
+    left: 867px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
     color: #ffffff;
-    font-size: 13px;
-    text-align: center;
-    letter-spacing: 0.13px;
-    line-height: 32px;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 26px;
 }
-
-.element .there-are-no-doubt {
+  
+.p1 {
     position: absolute;
-    width: 329px;
-    top: 371px;
-    left: 863px;
-    opacity: 0.85;
-    font-family: "BIZ UDPMincho-Regular", Helvetica;
-    font-weight: 400;
+    width: 325px;
+    top: 207px;
+    left: 327px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
     color: #ffffff;
-    font-size: 13px;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+  
+.next {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 29px;
+    left: 1452px;
+    font-family: "BIZ UDPMincho", serif;
+    font-style: normal;
+    color: #000000;
+    font-size: 25px;
     text-align: center;
-    letter-spacing: 0.13px;
-    line-height: 32px;
+    letter-spacing: 0;
+    line-height: 30px;
+    white-space: nowrap;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+  
