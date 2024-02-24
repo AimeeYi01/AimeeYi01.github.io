@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2.5rem; 
+    z-index: 1; 
+    position: relative;
+    animation: blink 1s infinite alternate;
+    font-family: "lores-12", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.d1 {
+    color: white;
+    z-index: 1;
+    font-size: 1.5rem;
+    margin-left: 12vw;
+    margin-top: 30vh;
+    position: relative;
+    z-index: 1;
+    font-family: "lores-12", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.t1 {
+    color: white;
+    z-index: 1;
+    font-size: 1.4rem;
+    margin-left: 40vw;
+    margin-top: 48vh;
+    position: relative;
+    z-index: 1;
+    font-family: "lores-12", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.m1 {
+    color: white;
+    z-index: 1;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 70vh;
+    position: relative;
+    z-index: 1;
+    font-family: "lores-12", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.d1 {
+    display: none; 
+}
+
+.t1 {
+    display: none; 
+}
+
+.m1 {
+    display: none; 
+}
+
+#Show {
+    display: none; 
+    margin-top: 40vh; 
+    margin-left: 80vw;
+    color: white;
+    border: 0.1rem solid white; 
+    z-index: 1;
+    font-size: 1rem;
+    position: relative;
+    font-family: "lores-12", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0.75rem;
+    border-radius: 10rem;
+    background: transparent
+}
+
+#Show:hover {
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+
+#Layer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 2; 
+}
+
+#PNG {
+    display: none;
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    width: 40vw;
+    opacity: 0.8;
+    transform: translate(-50%, -50%); 
+    z-index: 3;
+}
+
+#Close {
+    display: none;
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+    font-size: 2rem;
+    color: white;
+    opacity: 0.9;
+    text-align: center;
+    cursor: pointer;
+    font-family: "lores-12", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 3;
+}
+
+@keyframes blink {
+    0% {
+      opacity: 0; 
+    }
+    100% {
+      opacity: 1; 
+    }
+}
+
+#desktop, #tablet, #mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    #tablet {
+      display: block;
+    }
+    .t1 {
+        display: block; 
+    }  
+}
+
+@media only screen and (max-width: 600px) {
+    #mobile {
+      display: block;
+    }
+    .m1 {
+        display: block; 
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #desktop {
+      display: block;
+    }
+    .d1 {
+        display: block; 
+    }
+}
+
