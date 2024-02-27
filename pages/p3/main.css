@@ -1,47 +1,39 @@
-body{
+body {
     background-color: #000000;
     margin: 0;
     padding: 0;
     height: 100vh;
     overflow: visible;
 }
-
-.element {
-    background-color: #000000;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-  
-.div {
-    background-color: #000000;
-    overflow: hidden;
-    width: 1512px;
-    height: 982px;
-    position: relative;
-}
   
 .rectangle1 {
-    position: absolute;
-    width: 324px;
-    height: 660px;
-    top: 126px;
-    left: 751px;
-  }
-  
+  position: absolute;
+  width: 324px;
+  height: 660px;
+  top: 126px;
+  left: 751px;
+  transition: opacity 0.5s ease; 
+}
+
+.rectangle1:hover {
+  opacity: 0.6; 
+}
+
 .rectangle2 {
-    position: absolute;
-    width: 314px;
-    height: 216px;
-    top: 844px;
-    left: 756px;
-    filter: blur(30px);
-    background: linear-gradient(180deg, rgb(217, 217, 217) 0%, rgba(217, 217, 217, 0) 100%);
-    opacity: 0.7;
-  }
+  position: absolute;
+  width: 314px;
+  height: 216px;
+  top: 844px;
+  left: 756px;
+  filter: blur(30px);
+  background: linear-gradient(180deg, rgb(217, 217, 217) 0%, rgba(217, 217, 217, 0) 100%);
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+}
 
-
+.rectangle2:hover {
+  opacity: 0.5; 
+}
 
 .component {
     position: absolute;
@@ -50,10 +42,11 @@ body{
     top: -140px;
     left: 1095px;
     opacity: 0.95;
+    transition: opacity 0.5s ease;
 }
 
 .component:hover {
-  opacity: 0.7; 
+  opacity: 0.5; 
 }
 
 .group {
@@ -62,7 +55,7 @@ body{
     height: 1016px;
     top: 137px;
     left: -8px;
-  }
+}
   
 .window {
     position: absolute;
@@ -152,7 +145,3 @@ a {
     animation: fadeInAnimation 2s ease-in forwards; 
 }
   
-.rectangle1:hover,
-.rectangle2:hover {
-    opacity: 0.5; 
-}
