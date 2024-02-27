@@ -78,8 +78,8 @@ body{
 .p1 {
     position: absolute;
     width: 300px;
-    top: 379px;
-    left: 0;
+    top: 380px;
+    left: 280px;
     -webkit-text-stroke: 0.1px #181818;
     font-family: "BIZ UDPMincho", serif;
     font-style: normal;
@@ -93,8 +93,8 @@ body{
  .p3 {
     position: absolute;
     width: 300px;
-    top: 535px;
-    left: 908px;
+    top: 590px;
+    left: 900px;
     -webkit-text-stroke: 0.1px #181818;
     font-family: "BIZ UDPMincho", serif;
     font-style: normal;
@@ -107,19 +107,40 @@ body{
   
   .barcontain {
     position: absolute;
+    -webkit-appearance: none;
     width: 320px; 
     height: 3px; 
     top: 223px;
     left: 0;
-    background-color: #ffffff !important; 
+    background: white;
+    outline: none;
     opacity: 0.9; 
+    -webkit-transition: .2s;
 }
-  
+
+.barcontain::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: grey;
+  cursor: pointer;
+}
+
+.barcontain::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: grey;
+  cursor: pointer;
+}
+
 .next {
     position: absolute;
     width: 30px;
     height: 30px;
-    top: 921px;
+    top: 900px;
     left: 1430px;
     font-family: "BIZ UDPMincho", serif;
     font-style: normal;

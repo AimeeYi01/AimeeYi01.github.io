@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #202020;
     margin: 0;
     padding: 0;
@@ -12,26 +12,25 @@ body{
     flex-direction: row;
     justify-content: center;
     width: 100%;
-  }
+}
   
-  .div {
+.div {
     background-color: #202020;
     width: 1512px;
     height: 982px;
     position: relative;
-  }
+}
   
-  .group {
+.group {
     position: absolute;
     width: 1036px;
     height: 982px;
     top: 0;
     left: 0;
-   
     background-size: 100% 100%;
-  }
+}
   
- .text {
+.text {
     position: absolute;
     width: 630px;
     height: 470px;
@@ -45,9 +44,9 @@ body{
     letter-spacing: 0;
     line-height: 24px;
     text-shadow: 0 0 5px gray;
-  }
+}
   
- .button {
+.button {
     position: absolute;
     width: 70px;
     height: 40px;
@@ -66,14 +65,14 @@ body{
     justify-content: center; 
     align-items: center; 
     border-radius: 40px;
- }
+}
   
 .next {
     position: absolute;
     width: 30px;
     height: 30px;
-    top: 921px;
-    left: 1430px;
+    top: 880px;
+    left: 1380px;
     font-family: "BIZ UDPMincho", serif;
     font-style: normal;
     font-weight: 400;
@@ -83,9 +82,9 @@ body{
     letter-spacing: 0;
     line-height: 30px;
     white-space: nowrap;
-  }
+}
   
-  a {
+a {
     text-decoration: none;
     color: white;
  }

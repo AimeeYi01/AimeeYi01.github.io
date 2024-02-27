@@ -1,30 +1,7 @@
-body{
+body {
     background-color: white;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    overflow: visible;
-}
-
-.element {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    overflow: visible;
-}
-  
-.wrap {
-    background-color: #ffffff;
-    width: 1512px;
-    height: 982px;
-    overflow: visible;
-}
-  
-.group {
-    position: relative;
-    height: 100%;
     overflow: visible;
 }
   
@@ -34,7 +11,7 @@ body{
     left: 0;
     position: absolute;
     height: 932px;
-    transition: transform 0.5s ease;
+    transition: transform 0.8s ease;
     transform-origin: center;
     max-width: 100%; 
     height: auto; 
@@ -47,7 +24,7 @@ body{
     left: 464px;
     position: absolute;
     height: 932px;
-    transition: transform 0.5s ease;
+    transition: transform 0.8s ease;
     transform-origin: center; 
     max-width: 100%; 
     height: auto;
@@ -108,8 +85,3 @@ a {
     text-decoration: none;
     color: black;
 }
-
-
-
-
-  

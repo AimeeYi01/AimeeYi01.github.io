@@ -56,6 +56,13 @@ body{
     filter: blur(0px);  
 }
 
+.rec1:hover ~ div:not(.rec1, .p1),
+.rec2:hover ~ div:not(.rec2, .p2),
+.rec3:hover ~ div:not(.rec3, .p3) {
+    filter: blur(8px) brightness(0.9);
+    transition: filter 0.5s ease;
+}
+
 .p3 {
     width: 295px; 
     height: 495px; 
@@ -63,7 +70,6 @@ body{
     top: 127px; 
     position: absolute; 
     color: white; 
-    
     font-family: "BIZ UDPMincho", serif;
     font-style: normal;
     font-size: 12px;
@@ -86,7 +92,6 @@ body{
 }
 
 .p1 {
-    
     width: 295px; 
     height: 216px; 
     left: 204px; 
@@ -102,8 +107,8 @@ body{
 .next {
     width: 30px; 
     height: 30px; 
-    left: 1440px; 
-    top: 870px; 
+    left: 1210px; 
+    top: 400px; 
     position: absolute; 
     text-align: center; 
     color: black; 
@@ -112,7 +117,7 @@ body{
     font-style: normal;
     font-weight: 400; 
     line-height: 30px; 
-    word-wrap: break-word;  
+    word-wrap: break-word;
 }
 
 p {

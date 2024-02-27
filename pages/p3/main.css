@@ -36,11 +36,13 @@ body{
     height: 216px;
     top: 844px;
     left: 756px;
-    filter: blur(40px);
+    filter: blur(30px);
     background: linear-gradient(180deg, rgb(217, 217, 217) 0%, rgba(217, 217, 217, 0) 100%);
     opacity: 0.7;
   }
-  
+
+
+
 .component {
     position: absolute;
     width: 541px;
@@ -49,7 +51,11 @@ body{
     left: 1095px;
     opacity: 0.95;
 }
-  
+
+.component:hover {
+  opacity: 0.7; 
+}
+
 .group {
     position: relative;
     width: 425px;
@@ -69,23 +75,39 @@ body{
 .text {
     position: absolute;
     width: 535px;
-    top: 152px;
+    top: 100px;
     left: 95px;
     font-family: "BIZ UDPMincho", serif;
     font-style: normal;
     color: #ffffff;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 0;
     line-height: 27px;
-    text-shadow: 0 0 5px white;
+    text-shadow: 0 0 8px white;
+}
+
+.text:hover {
+  -webkit-mask-image: linear-gradient(-80deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2.5s infinite;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
 }
 
 .next {
     position: absolute;
     width: 30px;
     height: 30px;
-    top: 921px;
-    left: 90px;
+    top: 900px;
+    left: 330px;
     font-family: "BIZ UDPMincho", serif;
     font-style: normal;
     color: #ffffff;
@@ -115,4 +137,22 @@ a {
     .window {
     animation: fadeIn 5s ease-in-out forwards;
     opacity: 0; 
+    }
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0.1; 
+    }
+    to {
+        opacity: 1; 
+    }
+  }
+    
+    .text {
+    animation: fadeInAnimation 2s ease-in forwards; 
+}
+  
+.rectangle1:hover,
+.rectangle2:hover {
+    opacity: 0.5; 
 }
