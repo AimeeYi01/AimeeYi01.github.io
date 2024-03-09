@@ -1,0 +1,13 @@
+body {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.bg-blue {
+    background: blue;
+}
+
+.bg-red {
+    background: red;
+}
+
