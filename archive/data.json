@@ -1,0 +1,21 @@
+[
+    {
+      "image": "your-image-url",
+      "name": "Enchanted forest playland",
+      "location": "Ohio, US"
+    },
+
+    {
+      "image": "p2.jpeg",
+      "name": "Alice",
+      "location": "Los Angeles"
+    },
+    
+    {
+      "image": "image3.jpg",
+      "name": "Bob",
+      "location": "Chicago"
+    }
+]
+
+  

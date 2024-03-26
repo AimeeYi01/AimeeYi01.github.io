@@ -1,0 +1,43 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 3.5fr repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 50px 15px ; 
+    padding: 50px; 
+}
+
+.grid-item {
+    border: 1px solid #999;
+    text-align: center; 
+}
+
+.grid-item img {
+    z-index: 1000;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: "yorkten-slab-normal", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+}
+
+.small {
+    font-size: 1rem;
+    margin-top: -1.3rem;
+    color: black;
+    font-family: "courier-std", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+}
+
+.large {
+    font-size: 1.8rem;
+    color: black;
+    font-family: "courier-std", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+}

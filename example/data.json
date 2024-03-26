@@ -1,0 +1,17 @@
+[
+    {
+        "name": "block1",
+        "color": "red",
+        "asset": "dogs.jpg"
+    },
+    {
+        "name": "block2",
+        "color": "blue",
+        "asset": "otters.jpg"
+    },
+    {
+        "name": "block3",
+        "color": "red",
+        "asset": "water.jpg"
+    }
+]
