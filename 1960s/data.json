@@ -1,0 +1,37 @@
+[
+    {
+        "image": "60joy.jpg",
+        "name": "Joyland Amusement Park",
+        "location": "Kansas, US",
+        "date": "1949 - 2006",
+        "background": "Joyland Amusement Park, nestled in Wichita, Kansas, had a rich history spanning 55 years, from its inception in 1949 until its permanent closure in 2006. Founded by the Ottaway family, its origins were humble, with the primary aim of providing a permanent home for a miniature steam locomotive acquired by Herbert Ottaway. Initially situated on East Central in Wichita, the park eventually found its permanent location at 2801 South Hillside. Throughout its operation, Joyland evolved from a simple attraction into the largest theme park in central Kansas. The Ottaway family's dedication and passion for amusement led to the addition of various rides, including a wooden roller coaster and the iconic Whacky Shack dark ride. However, despite its initial success and enduring popularity, Joyland faced challenges in the early 2000s. Economic difficulties coupled with safety concerns led to its closure for the 2004 season. Interest in reviving the park surfaced in 2006 when T-Rex Group, a Seattle-based company, leased the property with plans to restore and reopen sections of it. Unfortunately, financial constraints prevented the park from reopening, leaving it abandoned and vulnerable to vandalism and decay. Despite the setbacks, efforts were made to breathe new life into Joyland. Renovations in 2006 focused on aesthetics, including repairs to the roller coaster and enhancements to the Log Jam water ride. Additionally, the Restore Hope organization sought community involvement to facilitate the park's restoration and expansion plans."
+    },
+    {
+        "image": "60dino.jpg",
+        "name": "Dinosaur World",
+        "location": "Arkansas, US",
+        "date": "1960s - 2005",
+        "background": "Dinosaur World, previously known as John Agar's Land of Kong and \"Farwell's Dinosaur Park\", was a renowned tourist attraction situated in Beaver, Arkansas. Spanning 65 acres, it boasted over a hundred life-size sculptures depicting dinosaurs, cavemen, and other prehistoric creatures, along with featuring the world's largest Noah's Ark Mural. Established in 1967 by Ola Farwell, the park initially began with 6-10 life-size dinosaur replicas and was named \"Farwell's Dinosaur Park\". In the late 1970s, it changed ownership and became \"John Agar's Land of Kong\", featuring a 40-foot tall statue of King Kong, known as the \"World's Largest King Kong\". Several of the park's dinosaurs briefly appeared in movies like \"It's Alive!\" and \"Elizabethtown\". By 2006, the park had become overgrown, yet oddly, the gift shop remained stocked. Tragically, a fire suspected to be arson destroyed the main building on August 3, 2011, leading to the park's ultimate demise."
+    },
+    {
+        "image": "60lake.jpg",
+        "name": "Lake Dolores Water Park",
+        "location": "Newberry Springs, California, US",
+        "date": "1962 - 2004",
+        "background": "Lake Dolores Waterpark, originally built by Bob Byers, started as a simple campground in the late 1950s near Interstate 15 in the Mojave Desert. Over time, it evolved into a popular waterpark known as \"The Fun Spot of The Desert!\" reaching its peak attendance in the 1970s and 1980s. After a decline in popularity, the park closed, only to be revitalized by Terry Christensen and his investment group in 1990. Renamed \"Rock–A–Hoola\" in 1998, it underwent renovations and featured modern fiberglass water slides and a 1950s theme. However, financial troubles plagued the park, leading to bankruptcy in 2000 and subsequent liquidation. The property changed hands multiple times before reopening as Discovery Waterpark in 2002. Despite efforts to revive it, the park struggled to stay afloat, operating sporadically in its final years. Vandalism and neglect led to its eventual demise, with parts of the park being sold off in 2009. Today, the remnants of Lake Dolores Waterpark stand as a testament to its once-thriving past, attracting urban explorers despite its dilapidated state."
+    },
+    {
+        "image": "60spree.jpg",
+        "name": "Spreepark",
+        "location": "Berlin, Germany",
+        "date": "1969 - 2002",
+        "background": "Spreepark, formerly known as Kulturpark Plänterwald Berlin, was a renowned amusement park located in the north of the Plänterwald in Berlin. Initially opened in 1969, it was the sole constant amusement park in East Germany and the only one in both East and West Berlin. After reunification, it was de-nationalized and operated by various entities, with Spreepark Berlin GmbH eventually taking over. Under new management, the park underwent changes, including the addition of new attractions and a shift towards a Western-style park model. However, financial difficulties arose in the late 1990s, leading to insolvency in 2001. Notably, Norbert Witte, the park's operator, controversially moved several attractions to Lima, Peru, in 2002. Since then, the park has remained closed, accumulating debts and falling into disrepair. Tragic events, including fires and legal issues, further marred its history. In 2014, the City of Berlin acquired the park with plans for restoration and cultural revitalization, managed by Grün Berlin."
+    },
+    {
+        "image": "60gea.jpg",
+        "name": "Geauga Lake",
+        "location": "Ohio, US",
+        "date": "1887 - 2007",
+        "background": "Geauga Lake, originally known as \"Picnic Lake\" or \"Giles Pond\", traces its roots back to 1817 when settler Sullivan Giles established picnic grounds and entertainment near a train station. The park officially opened for picnics and swimming in 1872, with a steamboat circling the lake. In 1887, it was transformed into Geauga Lake Park, hosting major league baseball games in 1888. The park's first ride, a steam-powered carousel, was added in 1889, marking the beginning of its evolution into an amusement park. Over the years, Geauga Lake expanded with additional rides and amenities, eventually being acquired by Funtime, Inc., in 1969. Premier Parks acquired Funtime in 1995 and rebranded Geauga Lake as Six Flags Ohio in 2000, later combining it with SeaWorld Ohio to form Six Flags Worlds of Adventure. Cedar Fair purchased the park in 2004, restoring its original name. However, financial challenges led to the park's closure in 2007, with the water park section operating until 2016 before closing as well."
+    }
+]

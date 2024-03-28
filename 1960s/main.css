@@ -1,0 +1,142 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #511515;
+    padding: 15px;
+    text-align: left;
+}
+
+.head {
+    color: #ffe4c4;
+    font-family: "latienne-pro", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+.head2 {
+    color: #ffe4c4;
+    font-family: "latienne-pro", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #511515;
+    padding: 20px;
+    text-align: right;
+}
+
+.foot {
+    color: #ffe4c4;
+    font-family: "latienne-pro", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 45vh;
+    border: 1.5px solid #511515;
+    overflow: hidden; 
+    background-color: #ffe4c4;   
+    transition: border-color 0.3s; 
+}
+
+.container:hover {
+    border: 2.5px solid #FFEDD6;
+    border-color: #FFEDD6;  
+}
+
+.container img {
+    width: 40%;
+    max-width: 100%; 
+    object-fit: cover;
+}
+
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    font-family: "latienne-pro", serif;
+    font-weight: 900;
+    font-style: normal;
+    text-align: center;
+    padding: 5px;
+    color: #511515;
+    font-size: 1rem;
+}
+
+.background-story {
+    width: 100%;
+    color: #d7a278;
+    padding: 30px;
+    line-height: 1.9rem;
+    word-spacing: 0.1rem;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    font-family: "brioso-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.background-story-wrapper {
+    width: 50vw;
+    background-color: #822121;
+    flex-grow: 1; 
+    overflow: scroll; 
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: none; 
+    color: #ffe4c4; 
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        border: 5px solid #000; 
+    }
+    
+    .content {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+        justify-content: center; 
+        height: 100%; 
+        margin-left: 33%;  
+    }
+    
+    .container img {
+        width: 100%;
+    }
+
+    .background-story {
+        width: 100%;
+    }
+
+    .background-story-wrapper {
+        width: 100%;
+        background-color: #822121;
+        overflow: auto; 
+        flex-grow: 1; 
+    }
+}

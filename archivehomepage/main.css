@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  height: 100vh;
+  background: url('bk3.gif') center center/cover no-repeat fixed;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  z-index: 1;
+}
+
+.small {
+  z-index: 3;
+}
+
+.title3 {
+  text-align: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-top: -1.6rem;
+  margin-bottom: -1.6rem;
+  font-family: "swear-display", serif;
+  font-weight: 600;
+  font-style: italic; 
+  color: #ffdebc
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(84, 14, 14, 0.35);
+  z-index: 2; 
+}
+
+.title {
+    margin-top: -0.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: "sutro-shaded-gradient", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    letter-spacing: -0.3rem;
+    word-spacing: 0.5rem;
+    padding: 0 2.4rem; 
+    color: #ffdebc  
+}
+
+.left {
+  margin-right: auto;
+  z-index: 3;
+}
+
+.right {
+  margin-left: auto;
+  z-index: 3;
+}
+
+h2 {
+  z-index: 3;
+}
+
+.allticket {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  z-index: 3;
+}
+
+.ticket {
+  margin-bottom: -8rem;
+  justify-content: center;
+  position: relative;
+}
+
+img {
+  width: 280px;
+  height: auto;
+}
+  
+.ticket:nth-child(1) {
+  left: 10vw;
+}
+
+.ticket:nth-child(2) {
+  top: -2vh;
+  left: 40vw;
+}
+
+.ticket:nth-child(3) {
+  top: -4vh;
+  left: 70vw;
+}
+
+.ticket:nth-child(4) {
+  top: -6vh;
+  left: 20vw;
+}
+
+.ticket:nth-child(5) {
+  top: -8vh;
+  left: 50vw;
+}
+
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* 将动画应用到图片悬停时 */
+.ticket:hover img {
+  animation: swing 0.5s ease-in-out;
+  transform-origin: center; /* 设置旋转点为图片中心 */
+}
+
+
+
+
+/* 弹窗样式 */
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%; /* 垂直居中 */
+  left: 50%; /* 水平居中 */
+  transform: translate(-50%, -50%); /* 通过位移来使弹窗在屏幕中央 */
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+#popupContent {
+  position: relative;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* About 按钮样式 */
+#aboutBtn {
+  font-size: 1.2rem;
+  position: fixed;
+  background-color: #ffdebc;
+  padding: 0.8rem;
+  border-radius: 10rem;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  font-family: "swear-display", serif;
+  font-weight: 600;
+  font-style: normal; 
+}
+
+
+
+  
+/* 媒体查询：屏幕宽度小于等于 600px */
+@media screen and (max-width: 600px) {
+  .allticket {
+    flex-direction: column; /* 将图片垂直排列 */
+    align-items: flex-start; /* 左对齐 */
+  }
+
+  .ticket {
+    margin-bottom: -3rem; /* 增加图片之间的间距 */
+    margin-left: 4rem; /* 取消水平间距 */
+  }
+
+  .ticket:nth-child(1) {
+    left: auto; /* 取消左侧定位 */
+    top: auto; /* 取消顶部定位 */
+  }
+
+  .ticket:nth-child(2) {
+    left: auto; /* 取消左侧定位 */
+    top: auto; /* 取消顶部定位 */
+  }
+
+  .ticket:nth-child(3) {
+    left: auto; /* 取消左侧定位 */
+    top: auto; /* 取消顶部定位 */
+  }
+
+  .ticket:nth-child(4) {
+    left: auto; /* 取消左侧定位 */
+    top: auto; /* 取消顶部定位 */
+  }
+
+  .ticket:nth-child(5) {
+    left: auto; /* 取消左侧定位 */
+    top: auto; /* 取消顶部定位 */
+  }
+}

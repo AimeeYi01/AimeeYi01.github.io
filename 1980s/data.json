@@ -1,0 +1,39 @@
+[
+    {
+        "image": "80camelot.jpg",
+        "name": "Camelot Theme Park",
+        "location": "Chorley, Lancashire, England, UK",
+        "date": "1983 - 2012",
+        "background": "Camelot Theme Park, based on the legend of King Arthur and the Knights of the Round Table, operated seasonally from 1983 until the end of 2012. Situated in Lancashire, England, on a 140-acre site near the village of Charnock Richard, it incorporated pseudo-medieval elements into its decor. Owned by The Story Group and operated by Knights Leisure, the park offered a variety of rides targeting families and young children, as well as thrill rides and roller coasters like Whirlwind, Knightmare, and Excalibur. However, on November 4, 2012, Knight’s Leisure announced the park would not reopen for the 2013 season. Because the number of tourists continues to decrease."
+    },
+    {
+        "image": "80pripyat.jpg",
+        "name": "Pripyat Amusement Park",
+        "location": "Pripyat, Ukraine",
+        "date": "1986 (never open)",
+        "background": "The Pripyat Amusement Park, situated in Pripyat, Ukraine, stands as an eerie reminder of the Chernobyl disaster. Scheduled for its grand opening on May 1, 1986, in time for May Day celebrations, the park's inauguration was thwarted by the catastrophe that occurred nearby on April 26. Reports suggest that the park briefly opened on April 27, possibly as a distraction from the unfolding disaster. However, these claims lack substantial evidence. Pripyat residents cannot definitively recall whether the park opened post-disaster. Nevertheless, the park, particularly its Ferris wheel, has emerged as an enduring symbol of the Chernobyl tragedy."
+    },
+    {
+        "image": "80splash.jpg",
+        "name": "Splashtown San Antonio",
+        "location": "San Antonio, Texas, US",
+        "date": "1985 - 2021",
+        "background": "Splashtown San Antonio, formerly known as Splashtown USA, was a popular water park situated in San Antonio, Texas, USA. Originally opened in 1985 as Water Park USA, it underwent several ownership changes over the years, eventually being acquired by Keith D. Kinney in 2006. Spanning 20 acres, the park boasted attractions including a half-million-gallon wave pool, a lazy river, numerous water slides and tube rides, and various recreational activities. Unfortunately, in October 2021, it was announced that the park would close to accommodate the construction of a car dealership, marking the end of its decades-long operation."
+    },
+    {
+        "image": "80slide.jpg",
+        "name": "Ebenezer Floppen Slopper's Wonderful Water Slides",
+        "location": "Illinois, US",
+        "date": "1980 - 1989",
+        "background": "The site, initially a gravel pit and landfill known as \"Mt Trashmore\", opened in 1951 under Clayburn Robinette's ownership. In the late 1970s, Mark Collor saw the potential for water slides on the overgrown hill and struck an agreement with the Robinette family. Collor named the park \"Ebenezer Floppen Slopper's Wonderful Water Slides\", inspired by a humorous encounter. Opening in 1980 with two concrete slides, the park quickly became popular, recouping installation costs within a month. Additional slides were added in the 1980s, and the park was renamed \"Doc River's Roaring Rapids Water Park\". However, it closed abruptly after the 1989 season, leading to speculation about its demise. Abandoned since then, the site has attracted urban explorers and sparked online speculation about its closure."
+    },
+    {
+        "image": "80world.jpg",
+        "name": "Children’s World (Jet Star 2)",
+        "location": "Elektrenai, Lithuania",
+        "date": "1986 - 2013",
+        "background": "Children’s World, or Vaikų pasaulis in Lithuanian, is an abandoned amusement park located on the outskirts of Elektrenai, Lithuania. Established in 1986 in a purpose-built Soviet-era city, it served as a recreational spot for the local community until its closure in 2013. The park faced safety concerns over the years, culminating in a notable incident where a roller coaster cart malfunctioned, causing visitors to climb from one cart to another for safety. Although no injuries occurred, public confidence waned, leading to dwindling attendance and eventual closure. Despite being left to the elements for around five years, the park remains relatively intact, showcasing rust and decay. Its most prominent features include a Ferris wheel and a unique roller coaster imported from Moscow, known as Jet Star 2 Amusement Park."
+    }
+]
+
+

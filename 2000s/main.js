@@ -10,12 +10,16 @@ $(document).ready(function() {
 
       // Populate container with data
       container.append('<img src="' + entry.image + '" alt="Image">');
-      container.append('<div class="content"><h2>' + entry.name + '</h2><p>' + entry.location + '</p><p>' + entry.time + '</p></div>');
-      container.append('<div class="background-story-wrapper"><div class="background-story"><p>' + entry.story + '</p></div></div>');
+      container.append('<div class="content"><h2>' + entry.name + '</h2><p>' + entry.location + '</p><p>' + entry.date + '</p></div>');
+      container.append('<div class="background-story-wrapper"><div class="background-story"><p>' + entry.background + '</p></div></div>');
 
       // Append container to the page
       $('#container').append(container);
     });
+  })
+  .fail(function(jqXHR, textStatus, errorThrown) {
+    console.error("Error loading JSON data:", textStatus, errorThrown);
   });
 });
+
 

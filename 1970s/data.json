@@ -1,0 +1,39 @@
+[
+    {
+        "image": "70disney.jpg",
+        "name": "Disney's River Country",
+        "location": "Florida, US",
+        "date": "1976 - 2001",
+        "background": "Disney's River Country was the pioneering water park at Walt Disney World Resort in Florida, evoking a rustic, old-fashioned swimming hole vibe. Opening in 1976, it featured sandy ground, lakeside beaches, and a unique water-filtering system using Bay Lake's water. Despite its popularity, the park closed indefinitely in 2001 and was officially declared permanently closed in 2005. Over the next 17 years, River Country sat abandoned, gradually being reclaimed by nature. Urban explorers frequented the site, navigating past fences and signs indicating its closure. The park's closing theme still played, and lights flickered on and off, as Disney had not cut off its power supply."
+    },
+    {
+        "image": "70liber.jpg",
+        "name": "Libertyland",
+        "location": "Memphis, Tennessee, US",
+        "date": "1976 - 2005",
+        "background": "Libertyland, an amusement park situated in Memphis, Tennessee, operated on the Mid-South Fairgrounds from its opening on July 4, 1976, until its closure in 2005 due to financial difficulties. Originally established to provide a theme park for the city, it featured various rides, including the renowned Zippin Pippin roller coaster, famously favored by Elvis Presley. Elvis even rented the park for his daughter Lisa Marie just days before he died in 1977. Despite its popularity, Libertyland struggled financially, failing to turn a significant profit. Efforts to revamp its image in the early 2000s were unsuccessful, leading to its closure. Although the park incurred minimal operating losses compared to local tax revenue, the city eventually invested more in a youth job creation program to compensate for the lost employment opportunities at the park."
+    },
+    {
+        "image": "70shady.jpg",
+        "name": "Shady Lake Park",
+        "location": "Ohio, US",
+        "date": "1978 - 1982",
+        "background": "Shady Lake Park was a modest amusement park managed by the Humphrey Family in Streetsboro, Ohio. Operating from 1978 to 1982, it featured rides relocated from Euclid Beach Park. After its closure, many attractions, including the iconic Euclid Beach Chief, found new homes at Old Indiana Fun Park. Although the park's gate structure reminiscent of Euclid Beach Park stood until 2004, the land was eventually repurposed, now hosting Shady Lake Apartments and a Raising Cane’s along Route 14."
+    },
+    {
+        "image": "70wild.jpg",
+        "name": "Wild Waters",
+        "location": "Florida, US",
+        "date": "1978 - 2016",
+        "background": "Wild Waters, situated in Silver Springs, Florida, was a quaint water park known for its serene atmosphere compared to its larger counterparts. Established in 1978 by ABC Television, it complemented its sister park, Silver Springs Nature Theme Park, renowned for Glass Bottom Boat tours and its use as a filming location for movies and TV shows. Wild Waters quickly became a favorite tourist spot in Florida, contributing to Ocala's prosperity until Orlando emerged as the primary tourist destination. Managed by Palace Entertainment from 2002, the park faced closure in 2016 due to financial reasons. With the state aiming to restore a natural environment, Wild Waters was permanently shut down, and demolition began in December 2018, marking the end of an era for the beloved water park."
+    },
+    {
+        "image": "70wet.jpg",
+        "name": "Wet 'n Wild Orlando",
+        "location": "Florida, US",
+        "date": "1977 - 2017",
+        "background": "Wet 'n Wild Orlando, the flagship water park of Wet 'n Wild owned by NBC Universal, was founded in 1977 by SeaWorld creator George Millay. Despite facing initial losses, it became a lucrative venture, leading to the establishment of other Wet 'n Wild parks across the Americas. In 1998, Universal Studios Recreation Group acquired the park, which underwent expansions and renovations over the years, including the addition of innovative attractions like The Storm and Brain Wash. However, in 2017, Wet 'n Wild Orlando closed its doors to make way for Universal Volcano Bay, marking the end of an era. The former site is now occupied by Universal's Endless Summer Resort."
+    }
+
+
+]
