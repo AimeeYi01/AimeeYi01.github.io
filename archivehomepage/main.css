@@ -51,7 +51,6 @@ body {
     text-shadow: -3px 0 #EB9898, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
-
 .left {
   margin-right: auto;
   z-index: 3;
@@ -117,27 +116,37 @@ img {
   100% { transform: rotate(0deg); }
 }
 
-/* 将动画应用到图片悬停时 */
+
 .ticket:hover img {
   animation: swing 0.5s ease-in-out;
-  transform-origin: center; /* 设置旋转点为图片中心 */
+  transform-origin: center; 
 }
 
 
 
 
-/* 弹窗样式 */
+
 #popup {
   display: none;
   position: fixed;
-  top: 50%; /* 垂直居中 */
-  left: 50%; /* 水平居中 */
-  transform: translate(-50%, -50%); /* 通过位移来使弹窗在屏幕中央 */
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 50px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: #681414;
+  border: 2px solid #ffdebc;
+  padding: 20px 60px 20px 60px;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 1);
   z-index: 999;
+}
+
+p {
+  color: #d7a278;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+  font-family: "brioso-pro", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 #popupContent {
@@ -146,12 +155,13 @@ img {
 
 #closeBtn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  font-size: 2rem;
+  top: -5rem;
+  right: -5rem;
   cursor: pointer;
+  color: #ffdebc;
 }
 
-/* About 按钮样式 */
 #aboutBtn {
   font-size: 1.2rem;
   letter-spacing: -0.05rem;
@@ -163,49 +173,47 @@ img {
   right: 2rem;
   z-index: 999;
   font-family: "sutro-shaded-gradient", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-weight: 400;
+  font-style: normal;
   color: #681414;
 }
 
 
-
-  
-/* 媒体查询：屏幕宽度小于等于 600px */
+ 
 @media screen and (max-width: 600px) {
   .allticket {
-    flex-direction: column; /* 将图片垂直排列 */
-    align-items: flex-start; /* 左对齐 */
+    flex-direction: column; 
+    align-items: flex-start; 
   }
 
   .ticket {
-    margin-bottom: -3rem; /* 增加图片之间的间距 */
-    margin-left: 6.5rem; /* 取消水平间距 */
+    margin-bottom: -3rem; 
+    margin-left: 6.5rem; 
   }
 
   .ticket:nth-child(1) {
-    left: auto; /* 取消左侧定位 */
-    top: auto; /* 取消顶部定位 */
+    left: auto; 
+    top: auto; 
   }
 
   .ticket:nth-child(2) {
-    left: auto; /* 取消左侧定位 */
-    top: auto; /* 取消顶部定位 */
+    left: auto; 
+    top: auto; 
   }
 
   .ticket:nth-child(3) {
-    left: auto; /* 取消左侧定位 */
-    top: auto; /* 取消顶部定位 */
+    left: auto; 
+    top: auto; 
   }
 
   .ticket:nth-child(4) {
-    left: auto; /* 取消左侧定位 */
-    top: auto; /* 取消顶部定位 */
+    left: auto; 
+    top: auto; 
   }
 
   .ticket:nth-child(5) {
-    left: auto; /* 取消左侧定位 */
-    top: auto; /* 取消顶部定位 */
+    left: auto; 
+    top: auto; 
   }
 
   #aboutBtn {
@@ -213,11 +221,16 @@ img {
     right: 1rem;
     padding: 0.6rem;
     font-size: 1rem;
-    
-  
   }
 
   .title3{
     padding: 5px;
+  }
+
+  #popup {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
+    z-index: 999;
   }
 }
