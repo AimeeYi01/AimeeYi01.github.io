@@ -3,19 +3,19 @@ document.getElementById("t1").addEventListener("click", function() {
   });
   
 document.getElementById("t2").addEventListener("click", function() {
-    window.location.href = "https://aimeeyi01.github.io/aimeeyi.github.io/2000s/";
+    window.location.href = "https://aimeeyi01.github.io/aimeeyi.github.io/1990s/";
   });
 
 document.getElementById("t3").addEventListener("click", function() {
-    window.location.href = "https://aimeeyi01.github.io/aimeeyi.github.io/2000s/";
+    window.location.href = "https://aimeeyi01.github.io/aimeeyi.github.io/1980s/";
   });
 
 document.getElementById("t4").addEventListener("click", function() {
-    window.location.href = "https://aimeeyi01.github.io/aimeeyi.github.io/2000s/";
+    window.location.href = "https://aimeeyi01.github.io/aimeeyi.github.io/1970s/";
   });
 
 document.getElementById("t5").addEventListener("click", function() {
-    window.location.href = "https://aimeeyi01.github.io/aimeeyi.github.io/2000s/";
+    window.location.href = "https://aimeeyi01.github.io/aimeeyi.github.io/1960s/";
   });
 
 
