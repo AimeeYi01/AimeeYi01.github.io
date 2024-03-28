@@ -16,13 +16,14 @@ body {
 .title3 {
   text-align: center;
   align-items: center;
-  font-size: 1.2rem;
-  margin-top: -1.6rem;
+  font-size: 1.1rem;
+  margin-top: -2rem;
   margin-bottom: -1.6rem;
   font-family: "swear-display", serif;
   font-weight: 600;
   font-style: italic; 
-  color: #ffdebc
+  color: #520014;
+  text-shadow: 0 0 10px #FFF6EB;
 }
 
 .overlay {
@@ -36,18 +37,20 @@ body {
 }
 
 .title {
-    margin-top: -0.5rem;
+    margin-top: 0.5rem;
     display: flex;
     justify-content: space-between;
     font-family: "sutro-shaded-gradient", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1.4rem;
-    letter-spacing: -0.3rem;
-    word-spacing: 0.5rem;
+    letter-spacing: -0.25rem;
+    word-spacing: 0.55rem;
     padding: 0 2.4rem; 
-    color: #ffdebc  
+    color: #681414; 
+    text-shadow: -3px 0 #EB9898, 0 2px black, 2px 0 black, 0 -2px black;
 }
+
 
 .left {
   margin-right: auto;
@@ -151,6 +154,7 @@ img {
 /* About 按钮样式 */
 #aboutBtn {
   font-size: 1.2rem;
+  letter-spacing: -0.05rem;
   position: fixed;
   background-color: #ffdebc;
   padding: 0.8rem;
@@ -158,9 +162,10 @@ img {
   bottom: 2rem;
   right: 2rem;
   z-index: 999;
-  font-family: "swear-display", serif;
-  font-weight: 600;
-  font-style: normal; 
+  font-family: "sutro-shaded-gradient", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  color: #681414;
 }
 
 
@@ -175,7 +180,7 @@ img {
 
   .ticket {
     margin-bottom: -3rem; /* 增加图片之间的间距 */
-    margin-left: 4rem; /* 取消水平间距 */
+    margin-left: 6.5rem; /* 取消水平间距 */
   }
 
   .ticket:nth-child(1) {
@@ -201,5 +206,18 @@ img {
   .ticket:nth-child(5) {
     left: auto; /* 取消左侧定位 */
     top: auto; /* 取消顶部定位 */
+  }
+
+  #aboutBtn {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.6rem;
+    font-size: 1rem;
+    
+  
+  }
+
+  .title3{
+    padding: 5px;
   }
 }
