@@ -1,0 +1,28 @@
+body {
+    background-image: url('mikubk.jpeg');
+}
+
+h1 {
+    color: #267E78;
+    text-shadow:
+    -3px -3px 0 #fff,  
+     3px -3px 0 #fff,
+    -3px  3px 0 #fff,
+     3px  3px 0 #fff; 
+    font-family: "nasalization", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    margin-left: 800px;
+    margin-top: 20px; 
+}
+
+img {
+    width: 60%;
+}
+
+a {
+    font-size: 40px;
+    margin-bottom: 50px;
+  
+}

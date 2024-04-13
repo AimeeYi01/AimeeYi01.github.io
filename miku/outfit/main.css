@@ -1,0 +1,81 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .tags {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: fixed;
+    text-align: center;
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1; 
+  }
+
+  h2 {
+    font-family: "magistral", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #133F3C;
+  }
+  
+  .tag {
+    padding: 10px 10px;
+    border-radius: 50px;
+    margin: 0 5px;
+    border-color: #39c5bb;
+    cursor: pointer;
+    background-color: #D0F1EF;
+    font-family: "nasalization", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #1C5E5A;
+  }
+  
+  .content {
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .info {
+    flex: 1;
+    text-align: left;
+    font-family: "magistral", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+  }
+  
+  .controls {
+    position: fixed; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    text-align: center;
+  }
+  
+  .controls button {
+    padding: 10px 10px;
+    border-radius: 50px;
+    margin: 0 5px;
+    border-color: #39c5bb;
+    background-color: #D0F1EF;
+    font-family: "nasalization", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #133F3C;
+  }

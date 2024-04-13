@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/kdx3zts.css">
+    <link rel="stylesheet" href="https://use.typekit.net/kdx3zts.css">
+
+    <title>miku-outfit</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="tags">
+          <button class="tag" data-filter="all">All</button>
+          <button class="tag" data-filter="futuristic">Futuristic</button>
+          <button class="tag" data-filter="lolita">Lolita</button>
+          <button class="tag" data-filter="school uniform">School Uniform</button>
+          <button class="tag" data-filter="traditional japanese">Traditional Japanese</button>
+          <button class="tag" data-filter="workwear">Workwear</button>
+        </div>
+        <div class="content">
+          <div class="info">
+            <h2 id="outfitName"></h2>
+            <p id="style"></p>
+            <p id="representativeSong"></p>
+          </div>
+          <img id="outfitImage" src="" alt="">
+        </div>
+        <div class="controls">
+          <button id="prevBtn" onclick="prevOutfit()">Previous</button>
+          <button id="nextBtn" onclick="nextOutfit()">Next</button>
+        </div>
+      </div>
+
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
