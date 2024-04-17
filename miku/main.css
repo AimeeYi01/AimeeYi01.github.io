@@ -1,5 +1,28 @@
 body {
     background-image: url('mikubk.jpeg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 100vh;
+    margin: 0;
+}
+
+.content1 {
+    display: flex;
+    
+}
+
+.content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5vw;
 }
 
 h1 {
@@ -13,19 +36,16 @@ h1 {
     font-weight: 400;
     font-style: normal;
     font-size: 60px;
-    margin-left: 800px;
-    margin-top: 20px; 
-    margin-bottom: 0px;
 }
 
 img {
-    width: 60%;
+    width: 45vw;
+    object-fit: cover;
+    padding-left: 5vw;
 }
 
 a {
     font-size: 45px;
-    margin-top: -30px;
-    margin-left: 1150px;
     color: white;
     text-decoration: none;
     font-family: "nasalization", sans-serif;

@@ -1,4 +1,3 @@
-// script.js
 let outfits = [];
 let currentOutfitIndex = 0;
 let originalOutfits = [];
