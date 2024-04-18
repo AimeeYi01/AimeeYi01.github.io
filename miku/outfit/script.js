@@ -3,13 +3,13 @@ let currentOutfitIndex = 0;
 let originalOutfits = [];
 
 function displayOutfit(index) {
-  const outfit = outfits[index];
-  document.getElementById('outfitName').textContent = outfit['Outfit name'];
-  document.getElementById('style').textContent = `Style: ${outfit['Style']}`;
-  document.getElementById('representativeSong').textContent = `Representative Song: ${outfit['Representative song']}`;
-  document.getElementById('outfitImage').src = outfit['Image'];
-}
-
+    const outfit = outfits[index];
+    document.getElementById('outfitName').textContent = outfit['Outfit name'];
+    document.getElementById('style').innerHTML = `Style:<br>${outfit['Style']}`;
+    document.getElementById('representativeSong').innerHTML = `Representative Song:<br>${outfit['Representative song']}`;
+    document.getElementById('outfitImage').src = outfit['Image'];
+  }
+  
 function prevOutfit() {
   currentOutfitIndex = (currentOutfitIndex - 1 + outfits.length) % outfits.length;
   displayOutfit(currentOutfitIndex);
