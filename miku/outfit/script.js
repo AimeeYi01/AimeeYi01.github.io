@@ -15,10 +15,15 @@ function prevOutfit() {
   displayOutfit(currentOutfitIndex);
 }
 
+function goHome() {
+    window.location.href = "https://aimeeyi01.github.io/aimeeyi.github.io/miku/";
+}
+
 function nextOutfit() {
   currentOutfitIndex = (currentOutfitIndex + 1) % outfits.length;
   displayOutfit(currentOutfitIndex);
 }
+
 
 document.addEventListener('DOMContentLoaded', function () {
   fetch('data.json')

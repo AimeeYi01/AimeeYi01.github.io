@@ -12,15 +12,19 @@ body {
   }
   
   .tags {
-    max-width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     position: fixed;
     text-align: center;
     top: 0; 
-    left: 50%; 
-    transform: translateX(-50%); 
     z-index: 1; 
+    left: 50%;
+    transform: translateX(-50%); 
+    
   }
 
   h2 {
@@ -33,7 +37,8 @@ body {
   .tag {
     padding: 10px 10px;
     border-radius: 50px;
-    margin: 0 5px;
+    padding: 0.5rem;
+ 
     border-color: #39c5bb;
     cursor: pointer;
     background-color: #D0F1EF;
@@ -66,6 +71,7 @@ body {
     left: 50%; 
     transform: translateX(-50%); 
     text-align: center;
+    bottom: 20px; 
   }
   
   .controls button {
@@ -78,4 +84,28 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #133F3C;
+    
   }
+
+
+  @media screen and (max-width: 600px) {
+    .content {
+        flex-direction: column; 
+        
+    }
+
+
+    .controls {
+        position: static; 
+        margin-top: 20px; 
+        transform: none;
+        margin-bottom: 1rem;
+        
+    }
+
+    img {
+        margin-top: -10%;
+    }
+
+ }
+
