@@ -109,12 +109,24 @@ body {
     padding: 10px 10px;
     border-radius: 50px;
     margin: 0 5px;
+    border: 2px solid #39c5bb;
+    
+  
+    color: #2E9E97;
     border-color: #39c5bb;
-    background-color: #D0F1EF;
+    background-color: #E0F6F4;
     font-family: "nasalization", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #133F3C;
+    
+    transition:  200ms ease;
+  }
+
+  .controls button:hover {
+    color: #ffffff;
+    
+    background-color: #43C7BE;
+    outline-offset: 3px;
   }
 
 
