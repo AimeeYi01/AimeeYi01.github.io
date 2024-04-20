@@ -55,14 +55,14 @@ body {
       outline: 2px solid #39c5bb;
       outline-offset: -2px;
     
-      color: #39c5bb;
+      color: #2E9E97;
       
       cursor: pointer;
       transition: outline-offset 200ms ease;
     }
 
   .tag:hover {
-      color: #2E9E97;
+      color: #1C5F5A;
       border: 2px solid #2E9E97;
       outline: 2px solid #2E9E97;
       background-color: #C0ECE9;
