@@ -25,6 +25,7 @@ body {
     margin-bottom: 1rem;
 }
 
+
   h2 {
     font-family: "magistral", sans-serif;
     font-weight: 500;
@@ -37,15 +38,41 @@ body {
     border-radius: 50px;
     padding: 0.5rem;
     margin: 0 0.2rem; 
- 
+
     border-color: #39c5bb;
     cursor: pointer;
-    background-color: #D0F1EF;
+    background-color: #E0F6F4;
     font-family: "nasalization", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #1C5E5A;
+    
   }
+
+  .tag {
+
+ 
+      border: 2px solid #39c5bb;
+      outline: 2px solid #39c5bb;
+      outline-offset: -2px;
+    
+      color: #39c5bb;
+      
+      cursor: pointer;
+      transition: outline-offset 200ms ease;
+    }
+
+  .tag:hover {
+      color: #2E9E97;
+      border: 2px solid #2E9E97;
+      outline: 2px solid #2E9E97;
+      background-color: #C0ECE9;
+      outline-offset: 3px;
+    }
+
+    .tag:active{
+      transform: scale(0.95);
+    }
+  
   
   .content {
     margin-top: 10%;
@@ -88,9 +115,10 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #133F3C;
-    
   }
 
+
+  
 
   @media screen and (max-width: 768px) {
 

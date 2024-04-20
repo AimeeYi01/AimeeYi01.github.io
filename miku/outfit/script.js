@@ -10,6 +10,8 @@ function displayOutfit(index) {
     document.getElementById('outfitImage').src = outfit['Image'];
   }
   
+
+
 function prevOutfit() {
   currentOutfitIndex = (currentOutfitIndex - 1 + outfits.length) % outfits.length;
   displayOutfit(currentOutfitIndex);
