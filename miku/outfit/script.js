@@ -12,6 +12,7 @@ function displayOutfit(index) {
   
 
 
+
 function prevOutfit() {
   currentOutfitIndex = (currentOutfitIndex - 1 + outfits.length) % outfits.length;
   displayOutfit(currentOutfitIndex);
@@ -53,5 +54,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+const movingGif = document.getElementById('movingGif');
 
-  
+function moveGif() {
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    const randomX = Math.random() * (windowWidth - movingGif.width);
+    const randomY = Math.random() * (windowHeight - movingGif.height);
+
+    movingGif.style.left = `${randomX}px`;
+    movingGif.style.top = `${randomY}px`;
+}
+
+setInterval(moveGif, 2000); 

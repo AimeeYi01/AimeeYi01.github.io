@@ -22,7 +22,7 @@ body {
     transform: translateX(-50%); 
     z-index: 1;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    
 }
 
 
@@ -75,7 +75,7 @@ body {
   
   
   .content {
-    margin-top: 10%;
+    margin-top: 9%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,7 +130,13 @@ body {
   }
 
 
-  
+  #movingGif {
+    width: 200px;
+    opacity: 0.95;
+    position: absolute; 
+    z-index: -1; 
+}
+
 
   @media screen and (max-width: 768px) {
 
@@ -162,5 +168,7 @@ body {
     .content {
         flex-direction: column; 
     }
+
+
  }
 
