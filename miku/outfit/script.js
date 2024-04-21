@@ -4,14 +4,11 @@ let originalOutfits = [];
 
 function displayOutfit(index) {
     const outfit = outfits[index];
-    document.getElementById('outfitName').textContent = outfit['Outfit name'];
+    document.getElementById('outfitname').textContent = outfit['Outfit name'];
     document.getElementById('style').innerHTML = `Style:<br>${outfit['Style']}`;
-    document.getElementById('representativeSong').innerHTML = `Representative Song:<br>${outfit['Representative song']}`;
-    document.getElementById('outfitImage').src = outfit['Image'];
+    document.getElementById('representativesong').innerHTML = `Representative Song:<br>${outfit['Representative song']}`;
+    document.getElementById('outfitimage').src = outfit['Image'];
   }
-  
-
-
 
 function prevOutfit() {
   currentOutfitIndex = (currentOutfitIndex - 1 + outfits.length) % outfits.length;
@@ -26,7 +23,6 @@ function nextOutfit() {
   currentOutfitIndex = (currentOutfitIndex + 1) % outfits.length;
   displayOutfit(currentOutfitIndex);
 }
-
 
 document.addEventListener('DOMContentLoaded', function () {
   fetch('data.json')
@@ -53,9 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
 const movingGif = document.getElementById('movingGif');
-
 function moveGif() {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;

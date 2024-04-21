@@ -1,6 +1,5 @@
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -22,9 +21,7 @@ body {
     transform: translateX(-50%); 
     z-index: 1;
     margin-top: 1rem;
-    
-}
-
+   }
 
   h2 {
     font-family: "magistral", sans-serif;
@@ -38,28 +35,22 @@ body {
     border-radius: 50px;
     padding: 0.5rem;
     margin: 0 0.2rem; 
-
     border-color: #39c5bb;
     cursor: pointer;
     background-color: #E0F6F4;
     font-family: "nasalization", sans-serif;
     font-weight: 400;
-    font-style: normal;
-    
+    font-style: normal; 
   }
 
   .tag {
-
- 
       border: 2px solid #39c5bb;
       outline: 2px solid #39c5bb;
       outline-offset: -2px;
-    
       color: #2E9E97;
-      
       cursor: pointer;
       transition: outline-offset 200ms ease;
-    }
+  }
 
   .tag:hover {
       color: #1C5F5A;
@@ -67,27 +58,26 @@ body {
       outline: 2px solid #2E9E97;
       background-color: #C0ECE9;
       outline-offset: 3px;
-    }
+  }
 
-    .tag:active{
+  .tag:active{
       transform: scale(0.95);
-    }
-  
+  }
   
   .content {
     margin-top: 9%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;  
   }
   
   .content img { 
     transition: 0.3s;
   }
-.content:hover img {
+
+  .content:hover img {
     transform: scale(1.07); 
-}
+  }
 
   .info {
     flex: 1;
@@ -100,7 +90,6 @@ body {
     line-height: 2rem;
     padding-left: 2rem;
     max-width: 50%;
-
   }
   
   .controls {
@@ -118,33 +107,27 @@ body {
     border-radius: 50px;
     margin: 0 5px;
     border: 2px solid #39c5bb;
-    
-  
     color: #2E9E97;
     border-color: #39c5bb;
     background-color: #E0F6F4;
     font-family: "nasalization", sans-serif;
     font-weight: 400;
     font-style: normal;
-    
     transition:  200ms ease;
   }
 
   .controls button:hover {
     color: #ffffff;
-    
     background-color: #43C7BE;
     outline-offset: 3px;
   }
 
-
   #movingGif {
     width: 200px;
-    opacity: 0.95;
+    opacity: 0.85;
     position: absolute; 
     z-index: -1; 
-}
-
+  }
 
   @media screen and (max-width: 768px) {
 
@@ -176,7 +159,5 @@ body {
     .content {
         flex-direction: column; 
     }
-
-
- }
+  }
 
