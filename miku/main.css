@@ -46,15 +46,81 @@ img {
 
 a {
     font-size: 45px;
-    color: white;
+
     text-decoration: none;
     font-family: "nasalization", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #267E78;
-    text-shadow:
-    -3px -3px 0 #fff,  
-     3px -3px 0 #fff,
-    -3px  3px 0 #fff,
-     3px  3px 0 #fff; 
+     
+    padding: 0.5rem;
+}
+
+.aboutbtn {
+    font-size: 1rem;
+    font-family: "nasalization", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #267E78;
+    background-color: transparent;
+ 
+    padding: 1rem; 
+    border: 2px solid #267E78; 
+    border-radius: 50px; 
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer; 
+    transition: 0.2s;
+}
+
+.aboutbtn:hover {
+    background-color: #73D4D4;
+    color: white;
+    
+
+}
+
+/* 弹窗样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 20%; /* 控制弹窗与页面顶部的距离 */
+}
+
+
+.modalcontent {
+    color: #267E78;
+    background-color: #C1ECEC;
+    margin: auto;
+    padding: 1.5rem 2.2rem;
+    width: 360px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "nasalization", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.7rem;
+    letter-spacing: -0.5px;
+    word-spacing: 1.5px;  
+}
+
+
+.close {
+    color: #267E78;
+    float: right;
+    margin-top: -1rem;
+    margin-right: -1rem;
+    font-family: "nasalization", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
