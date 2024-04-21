@@ -14,7 +14,6 @@ body {
 
 .content1 {
     display: flex;
-
 }
 
 .content2 {
@@ -43,6 +42,8 @@ img {
     width: 45vw;
     object-fit: cover;
     padding-left: 5vw;
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
 }
 
 a {
