@@ -17,7 +17,9 @@
             display: flex;
             flex-direction: column;
             width: 100vw; 
+           
         }
+       
 
         .grid {
             display: flex;
@@ -25,14 +27,22 @@
             align-items: center;
             padding-top: 34px;
             padding: 24px;
+            height: 285px;
            
         }
+
+
 
         .grid img {
             width: 450px;
             height: auto;
             margin-right: 20px;
-            border: 0.5px solid white; /* 设置5像素宽的白色实线边框 */
+            border: 0.5px solid white; 
+            transition: transform 0.3s; 
+        }
+
+        .grid:hover img {
+            transform: scale(1.1);
         }
 
         .grid div {
@@ -41,70 +51,91 @@
 
         .left {
             justify-content: flex-start;
-            background: #00000000;
+            background: #000000;
             background: conic-gradient(from 135deg, #000000, #FFFFFF);
-
-
-           
-
-
-
         }
 
         .right {
             justify-content: flex-end;
-                /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=00000000&c2=ffffff&gt=c&gd=dtr
-*/
-background: #00000000;
-background: conic-gradient(from 45deg, #000000, #FFFFFF);
+            background: #000000;
+            background: conic-gradient(from 45deg, #000000, #FFFFFF);
+        }
+
+        .title {
+            width: 450px;
+            height: 282.5px;
+        }
+
+        a {
+            text-decoration: none; /* 移除下划线 */
+            color: inherit; /* 保持父元素的文本颜色 */
+            cursor: pointer; /* 添加手形光标以指示可点击 */
+        }
+
+        /* 鼠标悬停时改变颜色 */
+        a:hover {
+            color: blue; /* 当鼠标悬停时，改变链接的颜色为蓝色 */
         }
 
     </style>
+    
 </head>
 
 <body>
     <div class="container">
-     
+
+        <div class="grid left">
+            <div class="title">
+                
+            </div>
+        </div>
+
         <div class="grid right">
-            <div>1</div>
+            <div>
+                <a href="https://aimeeyi01.github.io/aimeeyi.github.io/lab1/">Lab 1<br>Recreate Are.na Block</a>
+            </div>
             <img src="remake.jpg" alt="1">
         </div>
 
-     
         <div class="grid left">
             <img src="shadow.jpg" alt="2">
-            <div>2</div>
+            <div>
+                <a href="https://aimeeyi01.github.io/aimeeyi.github.io/shadow/">Studio 1<br>In Praise of Shadow</a>
+            </div>
         </div>
 
-
         <div class="grid right">
-            <div>3</div>
+            <div>
+                <a href="https://aimeeyi01.github.io/aimeeyi.github.io/conversation/">Lab 2<br>Visual Communication</a>
+            </div>
             <img src="communication.jpg" alt="3">
         </div>
 
-    
         <div class="grid left">
             <img src="archive.jpg" alt="4">
-            <div>4</div>
+            <div>
+                <a href="https://aimeeyi01.github.io/aimeeyi.github.io/archive/">Studio 2<br>You Can Go Back No One Is There</a>
+            </div>
         </div>
 
-
         <div class="grid right">
-            <div>5</div>
+            <div>
+                <a href="https://aimeeyi01.github.io/aimeeyi.github.io/mediatunnel/">Lab 3<br>Media Tunnel</a>
+            </div>
             <img src="media.jpg" alt="5">
         </div>
 
-
         <div class="grid left">
             <img src="cocktail.png" alt="6">
-            <div>6</div>
+            <div>
+                <a href="https://aimeeyi01.github.io/aimeeyi.github.io//">Studio 3<br>Find Your Cocktail<br>Still in the works</a>
+            </div>
         </div>
 
-
         <div class="grid right">
-            <div>7</div>
+            <div>
+                <a href="https://aimeeyi01.github.io/aimeeyi.github.io/film/">Lab 4<br>Film Script</a>
+            </div>
             <img src="film.jpg" alt="7">
     </div>
 
