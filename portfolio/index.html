@@ -5,33 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/oct5fbw.css">
     <title>portfolio</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: "loos-wide", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.1rem;
         }
 
         .container {
             display: flex;
             flex-direction: column;
             width: 100vw; 
-           
         }
-       
-
+    
         .grid {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 34px;
-            padding: 24px;
-            height: 285px;
-           
+            padding: 25px;
+            height: 285px; 
         }
-
-
 
         .grid img {
             width: 450px;
@@ -42,11 +40,12 @@
         }
 
         .grid:hover img {
-            transform: scale(1.1);
+            transform: ;
         }
 
         .grid div {
             flex: 1;
+            
         }
 
         .left {
@@ -60,6 +59,7 @@
             background: #000000;
             background: conic-gradient(from 45deg, #000000, #FFFFFF);
         }
+        
 
         .title {
             width: 450px;
@@ -67,14 +67,21 @@
         }
 
         a {
-            text-decoration: none; /* 移除下划线 */
-            color: inherit; /* 保持父元素的文本颜色 */
-            cursor: pointer; /* 添加手形光标以指示可点击 */
+            text-decoration: none;
+            color: black; 
+            cursor: pointer; 
+            transition: transform 0.3s;
         }
 
-        /* 鼠标悬停时改变颜色 */
+        
         a:hover {
-            color: blue; /* 当鼠标悬停时，改变链接的颜色为蓝色 */
+            transform: scale(1.1); 
+            color: grey; 
+        }
+
+        .c1 {
+            text-align: right;
+            align-items: right;
         }
 
     </style>
@@ -86,7 +93,8 @@
 
         <div class="grid left">
             <div class="title">
-                
+                <h1>Interaction<br>Portfolio</h1>
+                <h2><br>Studio & Lab</h2>
             </div>
         </div>
 
@@ -100,7 +108,7 @@
         <div class="grid left">
             <img src="shadow.jpg" alt="2">
             <div>
-                <a href="https://aimeeyi01.github.io/aimeeyi.github.io/shadow/">Studio 1<br>In Praise of Shadow</a>
+                <a href="https://aimeeyi01.github.io/aimeeyi.github.io/shadow/" class="c1">Studio 1<br>In Praise of Shadow</a>
             </div>
         </div>
 
@@ -128,7 +136,7 @@
         <div class="grid left">
             <img src="cocktail.png" alt="6">
             <div>
-                <a href="https://aimeeyi01.github.io/aimeeyi.github.io//">Studio 3<br>Find Your Cocktail<br>Still in the works</a>
+                <a href="https://aimeeyi01.github.io/aimeeyi.github.io//">Studio 3<br>Find Your Cocktail<br>Still in the works...</a>
             </div>
         </div>
 
