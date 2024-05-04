@@ -7,22 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
     <style>
-       
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
         }
 
-        
         .container {
             display: flex;
             flex-direction: column;
-            width: 100vw; 
+            width: 100vw; /* 占满横向屏幕 */
         }
 
-        
-        .grid-item {
+        .grid {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -30,23 +27,21 @@
             border-bottom: 1px solid #ccc;
         }
 
-        
-        .grid-item img {
+        .grid img {
             width: 500px;
             height: auto;
             margin-right: 20px;
         }
 
-        .grid-item div {
+        .grid div {
             flex: 1;
         }
 
-        
-        .left-align {
+        .left {
             justify-content: flex-start;
         }
 
-        .right-align {
+        .right {
             justify-content: flex-end;
         }
     </style>
@@ -54,48 +49,46 @@
 
 <body>
     <div class="container">
-    
-        <div class="grid-item right-align">
-            <img src="remake.jpg" alt="1">
+        <!-- 第1个格子：右对齐 -->
+        <div class="grid right">
             <div>1</div>
+            <img src="remake.jpg" alt="1">
         </div>
 
-     
-        <div class="grid-item right-align">
-            <div>2</div>
+        <!-- 第2个格子：左对齐 -->
+        <div class="grid left">
             <img src="shadow.jpg" alt="2">
+            <div>2</div>
         </div>
 
-       
-        <div class="grid-item left-align">
-            <img src="communication.jpg" alt="3">
+        <!-- 第3个格子：右对齐 -->
+        <div class="grid right">
             <div>3</div>
+            <img src="communication.jpg" alt="3">
         </div>
 
-    
-        <div class="grid-item right-align">
-            <div>4</div>
+        <!-- 第4个格子：左对齐 -->
+        <div class="grid left">
             <img src="archive.jpg" alt="4">
+            <div>4</div>
         </div>
 
-       
-        <div class="grid-item left-align">
-            <img src="media.jpg" alt="5">
+        <!-- 第5个格子：右对齐 -->
+        <div class="grid right">
             <div>5</div>
+            <img src="media.jpg" alt="5">
         </div>
 
-       
-        <div class="grid-item right-align">
-            <div>6</div>
+        <!-- 第6个格子：左对齐 -->
+        <div class="grid left">
             <img src="cocktail.png" alt="6">
+            <div>6</div>
         </div>
 
-      
-        <div class="grid-item right-align">
+       <!-- 第7个格子：右对齐 -->
+        <div class="grid right">
             <div>7</div>
-            <img src="film.jpg" alt="7">
-        </div>
-    </div>
-</body>
+    <img src="film.jpg" alt="7">
+</div>
 
-</html>
+            
