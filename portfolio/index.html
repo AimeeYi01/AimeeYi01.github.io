@@ -16,21 +16,23 @@
         .container {
             display: flex;
             flex-direction: column;
-            width: 100vw; /* 占满横向屏幕 */
+            width: 100vw; 
         }
 
         .grid {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
+            padding-top: 34px;
+            padding: 24px;
+           
         }
 
         .grid img {
-            width: 500px;
+            width: 450px;
             height: auto;
             margin-right: 20px;
+            border: 0.5px solid white; /* 设置5像素宽的白色实线边框 */
         }
 
         .grid div {
@@ -39,56 +41,71 @@
 
         .left {
             justify-content: flex-start;
+            background: #00000000;
+            background: conic-gradient(from 135deg, #000000, #FFFFFF);
+
+
+           
+
+
+
         }
 
         .right {
             justify-content: flex-end;
+                /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=00000000&c2=ffffff&gt=c&gd=dtr
+*/
+background: #00000000;
+background: conic-gradient(from 45deg, #000000, #FFFFFF);
         }
+
     </style>
 </head>
 
 <body>
     <div class="container">
-        <!-- 第1个格子：右对齐 -->
+     
         <div class="grid right">
             <div>1</div>
             <img src="remake.jpg" alt="1">
         </div>
 
-        <!-- 第2个格子：左对齐 -->
+     
         <div class="grid left">
             <img src="shadow.jpg" alt="2">
             <div>2</div>
         </div>
 
-        <!-- 第3个格子：右对齐 -->
+
         <div class="grid right">
             <div>3</div>
             <img src="communication.jpg" alt="3">
         </div>
 
-        <!-- 第4个格子：左对齐 -->
+    
         <div class="grid left">
             <img src="archive.jpg" alt="4">
             <div>4</div>
         </div>
 
-        <!-- 第5个格子：右对齐 -->
+
         <div class="grid right">
             <div>5</div>
             <img src="media.jpg" alt="5">
         </div>
 
-        <!-- 第6个格子：左对齐 -->
+
         <div class="grid left">
             <img src="cocktail.png" alt="6">
             <div>6</div>
         </div>
 
-       <!-- 第7个格子：右对齐 -->
+
         <div class="grid right">
             <div>7</div>
-    <img src="film.jpg" alt="7">
-</div>
+            <img src="film.jpg" alt="7">
+    </div>
 
             
