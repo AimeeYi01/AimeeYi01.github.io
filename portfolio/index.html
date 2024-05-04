@@ -30,8 +30,7 @@
             padding: 25px;
             height: 285px; 
         }
-
-       
+    
 .grid img {
     width: 450px;
     height: auto;
@@ -48,21 +47,25 @@
 
         .grid div {
             flex: 1;  
+            text-align: left;
         }
 
-        .left {
-            justify-content: flex-start;
+        .grid.right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background: #000000;
             background: conic-gradient(from 135deg, #000000, #FFFFFF);
         }
 
-        .right {
-            justify-content: flex-end;
+        .grid.left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background: #000000;
             background: conic-gradient(from 45deg, #000000, #FFFFFF);
         }
      
-
         a {
             text-decoration: none;
             color: black; 
@@ -80,13 +83,36 @@
             align-items: right;
         }
 
+        @media (max-width: 768px) {
+
+    .grid {
+        flex-direction: column; 
+        height: auto; 
+    }
+    
+    .grid img {
+        width: 100%; 
+        height: auto; 
+        margin: 0; 
+    }
+
+    .grid div {
+        width: 100%; 
+        text-align: left; 
+    }
+    
+    .grid img, .grid div {
+        margin-bottom: 20px; 
+    }
+}
+
     </style>
     
 </head>
-
 <body>
+    
     <div class="container">
-
+    
         <div class="grid left">
             <div class="title">
                 <h1>Interaction<br>Portfolio</h1>
@@ -95,59 +121,67 @@
         </div>
 
         <div class="grid right">
+            <img src="remake.jpg" alt="1">
+            <div class="kong"></div>
+            <div class="kong"></div>
             <div>
                 <a href="https://aimeeyi01.github.io/aimeeyi.github.io/lab1/">Lab 1<br>Are.na Block: Recreate</a>
-            </div>
-            <img src="remake.jpg" alt="1">
+            </div>  
         </div>
 
         <div class="grid left">
-            <img src="shadow.jpg" alt="2">
             <div>
                 <a href="https://aimeeyi01.github.io/aimeeyi.github.io/shadow/" class="c1">Studio 1<br>As Network: In Praise of Shadow</a>
             </div>
+            <img src="shadow.jpg" alt="2">
         </div>
 
         <div class="grid right">
+            <img src="communication.jpg" alt="3">
+            <div class="kong"></div>
+            <div class="kong"></div>
             <div>
                 <a href="https://aimeeyi01.github.io/aimeeyi.github.io/conversation/">Lab 2<br>Visual Communication: Lamb</a>
             </div>
-            <img src="communication.jpg" alt="3">
         </div>
 
         <div class="grid left">
-            <img src="archive.jpg" alt="4">
             <div>
                 <a href="https://aimeeyi01.github.io/aimeeyi.github.io/archivehomepage/">Studio 2<br>As Archive: You Can Go Back No One Is There</a>
             </div>
+            <img src="archive.jpg" alt="4">
         </div>
 
         <div class="grid right">
+            <img src="media.jpg" alt="5">
+            <div class="kong"></div>
+            <div class="kong"></div>
             <div>
                 <a href="https://aimeeyi01.github.io/aimeeyi.github.io/mediatunnel/">Lab 3<br>Media Tunnel: Rain</a>
-            </div>
-            <img src="media.jpg" alt="5">
+            </div>   
         </div>
 
         <div class="grid left">
-            <img src="cocktail.png" alt="6">
             <div>
                 <a href="https://aimeeyi01.github.io/aimeeyi.github.io//">Studio 3<br>As Identity: Find Your Cocktail<br>Still in the works...</a>
             </div>
+            <img src="cocktail.png" alt="6">
         </div>
 
         <div class="grid right">
+            <img src="film.jpg" alt="7">
+            <div class="kong"></div>
+            <div class="kong"></div>
             <div>
                 <a href="https://aimeeyi01.github.io/aimeeyi.github.io/film/">Lab 4<br>Film Script: Farewell My Concubine</a>
-            </div>
-            <img src="film.jpg" alt="7">
+            </div>      
         </div>
 
-        <div class="grid left">
-            <img src="json.jpg" alt="8">
+        <div class="grid left"> 
             <div>
                 <a href="https://aimeeyi01.github.io/aimeeyi.github.io/miku/">Lab 5<br>Filtered Data: Miku's Closet</a>
             </div>
+            <img src="json.jpg" alt="8">
             
         </div>
     </div>
