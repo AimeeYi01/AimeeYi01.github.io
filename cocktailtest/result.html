@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result - Cocktail Finder</title>
+    <style>
+        /* 简单的样式 */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .cocktail {
+            margin: 10px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="notice" style="display: none; margin-bottom: 100px; font-weight: bold;"><p>You may like this</p></div>
+    
+    <h1>Cocktail Results</h1>
+
+
+    <div id="result"></div>
+
+    <script>
+        // 获取URL中的查询参数
+        const urlParams = new URLSearchParams(window.location.search);
+        const ingredients = urlParams.get('ingredients');
+
+        function searchCocktails() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '';
+
+            if (ingredients) {
+                // 根据所选标签进行搜索
+                fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${encodeURIComponent(ingredients)}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.drinks && data.drinks.length > 0) {
+                            // 随机选择一个鸡尾酒
+                            const randomIndex = Math.floor(Math.random() * data.drinks.length);
+                            const cocktailId = data.drinks[randomIndex].idDrink;
+
+                            // 获取鸡尾酒详细信息
+                            fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${cocktailId}`)
+                                .then(response => response.json())
+                                .then(data => {
+                                    displayCocktail(data.drinks[0]);
+                                })
+                                .catch(error => {
+                                    console.error(error);
+                                    recommendClosestCocktail(ingredients);
+                                });
+                        } else {
+                            // 如果没有找到匹配的鸡尾酒，推荐最相近的鸡尾酒
+                            recommendClosestCocktail(ingredients);
+                        }
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        recommendClosestCocktail(ingredients);
+                    });
+            } else {
+                // 没有选择任何标签，随机推荐一款鸡尾酒
+                fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/random.php`)
+                    .then(response => response.json())
+                    .then(data => {
+                        displayCocktail(data.drinks[0]);
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        resultDiv.innerHTML = 'An error occurred while fetching data. Please try again later.';
+                    });
+            }
+        }
+
+        // 推荐与用户选择的标签最相近的鸡尾酒
+        function recommendClosestCocktail(selectedIngredients) {
+            const resultDiv = document.getElementById('result');
+
+            // 随机选择用户选择的一个或多个标签进行搜索
+            const selectedIngredientsArray = selectedIngredients.split(',');
+            const randomIngredients = selectedIngredientsArray[Math.floor(Math.random() * selectedIngredientsArray.length)];
+
+            // 使用随机选择的标签进行搜索
+            fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${encodeURIComponent(randomIngredients)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.drinks && data.drinks.length > 0) {
+                        // 随机选择一个鸡尾酒
+                        const randomIndex = Math.floor(Math.random() * data.drinks.length);
+                        const cocktailId = data.drinks[randomIndex].idDrink;
+
+                        // 获取鸡尾酒详细信息
+                        fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${cocktailId}`)
+                            .then(response => response.json())
+                            .then(data => {
+                                displayCocktail(data.drinks[0]);
+                            })
+                            .catch(error => {
+                                console.error(error);
+                                resultDiv.innerHTML = 'An error occurred while fetching data. Please try again later.';
+                            });
+                    } else {
+                        // 如果仍然没有找到匹配的鸡尾酒，则随机推荐一款鸡尾酒
+                        fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/random.php`)
+                            .then(response => response.json())
+                            .then(data => {
+                                displayCocktail(data.drinks[0]);
+                            })
+                            .catch(error => {
+                                console.error(error);
+                                resultDiv.innerHTML = 'An error occurred while fetching data. Please try again later.';
+                            });
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                    resultDiv.innerHTML = 'An error occurred while fetching data. Please try again later.';
+                });
+        }
+
+        // 显示或隐藏提示消息的函数
+function showNotice(message) {
+    const noticeDiv = document.getElementById('notice');
+    if (message) {
+        // 如果有提示消息，显示 `div` 元素并设置其文本内容
+        noticeDiv.style.display = 'block';
+        noticeDiv.innerText = message;
+    } else {
+        // 如果没有提示消息，隐藏 `div` 元素
+        noticeDiv.style.display = 'none';
+        noticeDiv.innerText = '';
+    }
+}
+
+// 根据标签查找匹配的鸡尾酒
+function fetchCocktailByIngredients(ingredients) {
+    const url = `${baseUrl}${apiKey}/filter.php?i=${ingredients}`;
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.drinks && data.drinks.length > 0) {
+                // 显示匹配的第一个鸡尾酒
+                const cocktailId = data.drinks[0].idDrink;
+                fetchCocktailDetails(cocktailId);
+            } else {
+                // 没有找到完全匹配的鸡尾酒
+                // 显示提示消息
+                showNotice('没有找到完全匹配的鸡尾酒，但我猜你应该会喜欢这个。');
+                
+                // 获取随机鸡尾酒
+                fetchRandomCocktail();
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+}
+// 显示或隐藏提示消息的函数
+// 显示或隐藏提示消息的函数
+function showNotice(message) {
+    const noticeDiv = document.getElementById('notice');
+    if (message) {
+        // 显示 `div` 元素并设置其文本内容
+        noticeDiv.style.display = 'block';
+        noticeDiv.innerText = message;
+    } else {
+        // 隐藏 `div` 元素
+        noticeDiv.style.display = 'none';
+        noticeDiv.innerText = '';
+    }
+}
+
+// 根据标签查找匹配的鸡尾酒
+function fetchCocktailByIngredients(ingredients) {
+    const url = `${baseUrl}${apiKey}/filter.php?i=${ingredients}`;
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.drinks && data.drinks.length > 0) {
+                // 显示匹配的第一个鸡尾酒
+                const cocktailId = data.drinks[0].idDrink;
+                fetchCocktailDetails(cocktailId);
+                
+                // 显示提示消息，告知用户得到了不完全匹配的鸡尾酒
+                showNotice('没有找到完全匹配的鸡尾酒，但我猜你应该会喜欢这个。');
+                
+            } else {
+                // 没有找到完全匹配的鸡尾酒
+                // 显示提示消息，告知用户没有找到完全匹配的鸡尾酒
+                showNotice('没有找到完全匹配的鸡尾酒，但我猜你应该会喜欢这个。');
+                
+                // 获取随机鸡尾酒
+                fetchRandomCocktail();
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+}
+
+
+
+        // 显示鸡尾酒信息，包括原料和制作步骤
+        function displayCocktail(cocktail) {
+            const resultDiv = document.getElementById('result');
+            const cocktailDiv = document.createElement('div');
+            cocktailDiv.className = 'cocktail';
+
+            // 创建鸡尾酒图片元素
+            const img = document.createElement('img');
+            img.src = cocktail.strDrinkThumb;
+            img.alt = cocktail.strDrink;
+            cocktailDiv.appendChild(img);
+
+            // 创建鸡尾酒名称
+            const name = document.createElement('h2');
+            name.innerText = cocktail.strDrink;
+            cocktailDiv.appendChild(name);
+
+            // 创建制作步骤标题
+            const instructionsHeading = document.createElement('h3');
+            instructionsHeading.innerText = 'Instructions:';
+            cocktailDiv.appendChild(instructionsHeading);
+
+            // 创建制作步骤内容
+            const instructions = document.createElement('p');
+            instructions.innerText = cocktail.strInstructions;
+            cocktailDiv.appendChild(instructions);
+
+            // 创建原料标题
+            const ingredientsHeading = document.createElement('h3');
+            ingredientsHeading.innerText = 'Ingredients:';
+            cocktailDiv.appendChild(ingredientsHeading);
+
+            // 创建无序列表用于显示原料
+            const ingredientsList = document.createElement('ul');
+            ingredientsList.style.listStyleType = 'none';
+
+            // 遍历鸡尾酒的所有原料和量
+            for (let i = 1; i <= 15; i++) {
+                const ingredient = cocktail[`strIngredient${i}`];
+                const measure = cocktail[`strMeasure${i}`];
+
+                // 如果原料不为空，则添加到列表中
+                if (ingredient) {
+                    const listItem = document.createElement('li');
+                    listItem.innerText = `${ingredient}${measure ? ` - ${measure}` : ''}`;
+                    ingredientsList.appendChild(listItem);
+                }
+            }
+
+            // 将原料列表添加到鸡尾酒Div中
+            cocktailDiv.appendChild(ingredientsList);
+
+            // 将鸡尾酒Div添加到结果Div中
+            resultDiv.appendChild(cocktailDiv);
+        }
+
+        // 页面加载时执行搜索
+        window.onload = function() {
+            searchCocktails();
+        };
+
+    </script>
+</body>
+
+</html>

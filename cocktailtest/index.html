@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Finder</title>
+    <style>
+        /* 简单的样式 */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .ingredient-labels {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .ingredient-label {
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .ingredient-label.active {
+            background-color: #add8e6;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Cocktail Finder!</h1>
+
+    <div class="ingredient-labels">
+        <!-- 20个原料标签 -->
+        <div class="ingredient-label" onclick="toggleLabel(this)">Gin</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Bourbon</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Vodka</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Tequila</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Rum</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Whiskey</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Champagne</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Brandy</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Lime juice</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Lemon juice</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Pineapple juice</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Orange juice</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Sugar</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Sugar syrup</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Salt</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Bitter</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Cream</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Egg white</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Sprite</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Carbonated water</div>
+    </div>
+
+    <button onclick="goToResultPage()">Ready</button>
+
+    <script>
+        // 存储用户选择的标签
+        const selectedLabels = [];
+
+        // 切换标签的选择状态
+        function toggleLabel(element) {
+            const label = element.innerText;
+            element.classList.toggle('active');
+
+            if (selectedLabels.includes(label)) {
+                selectedLabels.splice(selectedLabels.indexOf(label), 1);
+            } else {
+                selectedLabels.push(label);
+            }
+        }
+
+        // 跳转到结果页面，传递所选标签作为查询参数
+        function goToResultPage() {
+            // 将用户选择的标签连接成一个查询参数
+            const query = selectedLabels.join(',');
+            const encodedQuery = encodeURIComponent(query);
+
+            // 如果没有选择任何标签，则查询参数为空
+            if (encodedQuery === '') {
+                window.location.href = 'result.html';
+            } else {
+                window.location.href = `result.html?ingredients=${encodedQuery}`;
+            }
+        }
+
+        // 创建Ready按钮点击事件
+function handleReadyClick() {
+    const selectedIngredients = getSelectedIngredients();
+    const queryParams = selectedIngredients.join(',');
+
+    // 如果没有选择任何原料标签
+    if (queryParams.trim() === '') {
+        // 跳转到Result页面并显示随机鸡尾酒
+        window.location.href = 'result.html?random=true';
+    } else {
+        // 跳转到Result页面并携带选择的原料标签作为查询参数
+        window.location.href = `result.html?ingredients=${queryParams}`;
+    }
+}
+
+// 假设存在函数getSelectedIngredients()返回用户选择的标签数组
+
+    </script>
+</body>
+
+</html>
+

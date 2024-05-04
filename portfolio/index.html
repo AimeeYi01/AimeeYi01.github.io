@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <style>
+       
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100vw; 
+        }
+
+        
+        .grid-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        
+        .grid-item img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .grid-item div {
+            flex: 1;
+        }
+
+        
+        .left-align {
+            justify-content: flex-start;
+        }
+
+        .right-align {
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    
+        <div class="grid-item left-align">
+            <img src="https://via.placeholder.com/100" alt="1">
+            <div>1</div>
+        </div>
+
+     
+        <div class="grid-item right-align">
+            <div>2</div>
+            <img src="https://via.placeholder.com/100" alt="2">
+        </div>
+
+       
+        <div class="grid-item left-align">
+            <img src="https://via.placeholder.com/100" alt="3">
+            <div>3</div>
+        </div>
+
+    
+        <div class="grid-item right-align">
+            <div>4</div>
+            <img src="https://via.placeholder.com/100" alt="4">
+        </div>
+
+       
+        <div class="grid-item left-align">
+            <img src="https://via.placeholder.com/100" alt="5">
+            <div>5</div>
+        </div>
+
+       
+        <div class="grid-item right-align">
+            <div>6</div>
+            <img src="https://via.placeholder.com/100" alt="6">
+        </div>
+
+      
+        <div class="grid-item right-align">
+            <div>7</div>
+            <img src="https://via.placeholder.com/100" alt="7">
+        </div>
+    </div>
+</body>
+
+</html>
