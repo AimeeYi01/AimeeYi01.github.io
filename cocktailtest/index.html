@@ -1,57 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/maw6itr.css">
+    <link rel="stylesheet" href="https://use.typekit.net/maw6itr.css">
     <title>Cocktail Finder</title>
-    <style>
-        /* 简单的样式 */
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        .ingredient-labels {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .ingredient-label {
-            margin: 5px;
-            padding: 5px 10px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .ingredient-label.active {
-            background-color: #add8e6;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
 
 <body>
-    <h1>Welcome to Cocktail Finder!</h1>
+<div class="container">
 
+    <div id="transition-overlay">
+       
+    </div>
+
+    <div class="left-section">
+        <h1>Find Your Cocktail</h1>
+
+        <h3>Choose the ingredients you like, then click "ready" to get your cocktail.<br>
+            When there is no exact match, you'll get a cocktail that contains some of the chosen ingredients.<br>
+            If you don't know what to choose, you can just click "ready" to get a random cocktail.</h3>
+      
     <div class="ingredient-labels">
-        <!-- 20个原料标签 -->
         <div class="ingredient-label" onclick="toggleLabel(this)">Gin</div>
         <div class="ingredient-label" onclick="toggleLabel(this)">Bourbon</div>
         <div class="ingredient-label" onclick="toggleLabel(this)">Vodka</div>
@@ -74,13 +47,23 @@
         <div class="ingredient-label" onclick="toggleLabel(this)">Carbonated water</div>
     </div>
 
-    <button onclick="goToResultPage()">Ready</button>
+    <div class="about-link">
+        <a href="" target="_blank">
+            <span class="about-text">About</span>
+        </a>
+    </div>
+    
+</div>
+
+    <div class="right-section">
+        <button onclick="goToResultPage()">Ready</button>
+    </div>
+</div>
 
     <script>
-        // 存储用户选择的标签
+     
         const selectedLabels = [];
-
-        // 切换标签的选择状态
+   
         function toggleLabel(element) {
             const label = element.innerText;
             element.classList.toggle('active');
@@ -91,14 +74,12 @@
                 selectedLabels.push(label);
             }
         }
-
-        // 跳转到结果页面，传递所选标签作为查询参数
+   
         function goToResultPage() {
-            // 将用户选择的标签连接成一个查询参数
+           
             const query = selectedLabels.join(',');
             const encodedQuery = encodeURIComponent(query);
-
-            // 如果没有选择任何标签，则查询参数为空
+     
             if (encodedQuery === '') {
                 window.location.href = 'result.html';
             } else {
@@ -106,25 +87,47 @@
             }
         }
 
-        // 创建Ready按钮点击事件
 function handleReadyClick() {
     const selectedIngredients = getSelectedIngredients();
     const queryParams = selectedIngredients.join(',');
 
-    // 如果没有选择任何原料标签
     if (queryParams.trim() === '') {
-        // 跳转到Result页面并显示随机鸡尾酒
+     
         window.location.href = 'result.html?random=true';
     } else {
-        // 跳转到Result页面并携带选择的原料标签作为查询参数
+        
         window.location.href = `result.html?ingredients=${queryParams}`;
     }
 }
 
-// 假设存在函数getSelectedIngredients()返回用户选择的标签数组
+const transitionOverlay = document.getElementById('transition-overlay');
+
+function goToResultPage() {
+    
+    transitionOverlay.classList.add('show');
+
+    setTimeout(() => {
+        const query = selectedLabels.join(',');
+        const encodedQuery = encodeURIComponent(query);
+    
+        if (encodedQuery === '') {
+            window.location.href = 'result.html';
+        } else {
+            window.location.href = `result.html?ingredients=${encodedQuery}`;
+        }
+    }, 2000); 
+}
+
+const aboutButton = document.querySelector('.about-link');
+
+// 为 about 按钮添加点击事件处理程序
+aboutButton.addEventListener('click', function() {
+    // 跳转到 about.html 页面
+    window.location.href = 'about.html';
+});
 
     </script>
-</body>
 
+</body>
 </html>
 

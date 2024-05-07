@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: row; 
+    height: 100vh;
+}
+
+#left-panel {
+    width: 57%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #216583; 
+    overflow-y: auto; 
+    overflow-x: auto; 
+    height: 100%;
+    
+}
+
+#right-panel {
+    width: 43%;
+    background-color: #fff1c1;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; 
+    overflow-x: auto; 
+    height: 100%;  
+}
+
+h2 {
+    margin-top: 10px;
+    line-height: 1.2;
+    text-align: center;
+    color: #F76262;
+    font-size: 70px;
+    font-family: "pacifico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    word-wrap: break-word;
+    text-shadow: 
+        1px -1px 0px #a22422, 
+        -1px 1px 0px #a22422; 
+}
+
+h3 {
+    font-size: 30px;
+    font-family: "scrivano", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.description-top {
+    margin-top: 20px;
+}
+
+span {
+    color: #216583; 
+}
+
+#description {
+    background-color: #fff1c1;
+    height: 660px;
+    font-size: 18px; 
+    line-height: 1.7;
+    font-family: "scrivano", serif;
+    font-weight: 900; 
+    font-style: normal; 
+    color: #216583; 
+    margin-top: -1vh;
+}
+
+#description h3, #description p {
+    width: 75%;
+    margin: 0 auto; 
+}
+
+#ingredients {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#ingredients li {
+    text-align: center; 
+}
+
+#cocktail-frame {
+    position: relative;
+    margin-top: -50px;
+    width: 500px; 
+    height: 750px; 
+    border: 2px solid #fff1c1;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 13px 10px rgba(0, 0, 0, 0.3), 
+    0 -5px 5px rgba(0, 0, 0, 0.2),
+    5px 0 5px rgba(0, 0, 0, 0.2),
+    -5px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(255, 241, 193, 0.1); 
+    z-index: 1; 
+}
+
+#cocktail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center 60%; 
+}
+
+#notice {
+    display: none;
+    position: absolute;
+    bottom: 2.5vh; 
+    width: 80%; 
+    padding: 20px; 
+    color: #fff1c1; 
+    text-align: center; 
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+    font-family: "scrivano", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.back-button-container {
+    position: absolute;
+    top: 25px; 
+    left: 25px; 
+    display: flex; 
+    align-items: center;
+    cursor: pointer; 
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.back-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px; 
+    background-color: transparent;
+    border: 2px solid #fff1c1;
+    border-radius: 50%; 
+    transition: all 0.2s ease; 
+    background-color: transparent;
+}
+
+.back-text {
+    margin-left: 12px; 
+    display: none; 
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+    font-family: "scrivano", serif;
+    font-weight: 900;
+    font-style: italic;
+    background-color: transparent;
+    color: #fff1c1;
+    transition: all 0.2s ease; 
+}
+
+.back-button-container:hover .back-circle {
+    background-color: #fff1c1;
+}
+
+.back-button-container:hover .back-text {
+    display: inline-block; 
+}
+
+.kong {
+    height: 80px;
+}
+
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #216583; 
+    opacity: 1;
+    z-index: 10000;
+    transition: opacity 1.5s ease; 
+}
+
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column; 
+    }
+
+    #right-panel {
+        width: 100%;
+        height: auto;
+        overflow-y: scroll;
+    }
+
+    #left-panel {
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+      #cocktail-image {
+        max-height: 320px;
+        width: auto;
+    }
+
+    #cocktail-frame {
+       height: 320px;
+       width: 320px;
+    }
+
+    #notice {
+        position: absolute; 
+        top: 40%;
+        width: 70%; 
+        text-align: center; 
+        color: #fff1c1; 
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
