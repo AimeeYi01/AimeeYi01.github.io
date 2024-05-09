@@ -51,6 +51,13 @@
                 <div class="kong"></div>
             </div> 
 
+                <div id="refresh-button" class="refresh-button-container">
+                    <span class="refresh-text">One more</span> 
+                    <div class="refresh-circle"></div> 
+                    
+                </div>
+
+            </div>
            
         </div>
         
@@ -222,6 +229,14 @@ window.addEventListener('load', function() {
     });
 });
 
+
+     // 为刷新按钮添加点击事件
+    const refreshButton = document.getElementById('refresh-button');
+
+    refreshButton.addEventListener('click', function() {
+        // 刷新页面
+        window.location.reload();
+    });
     </script>
 </body>
 

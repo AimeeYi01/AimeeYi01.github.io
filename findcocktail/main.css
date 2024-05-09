@@ -43,6 +43,9 @@ h3 {
     font-family: "scrivano", serif;
     font-weight: 900;
     font-style: italic;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .ingredient-labels {
@@ -123,6 +126,7 @@ button:hover {
     overflow: hidden; 
     overflow-y: auto; 
     overflow-x: auto; 
+    text-align: center;
 }
 
 .right-section {
@@ -232,6 +236,15 @@ button:hover {
         height: auto;
     }
 
+    .h3 {
+        max-width: 100px;
+        font-size: 12px;
+        width: 10px;
+        margin-top: -1vh;
+        text-align: center;
+        margin: 30px auto;
+    }
+
     .ingredient-labels {
         display: grid; 
         grid-template-columns: repeat(4, 70px); 
@@ -242,11 +255,6 @@ button:hover {
         align-items: center;
     }
 
-    .h3 {
-        font-size: 14px;
-        max-width: 200px;
-        margin-top: -1vh;
-    }
 
     .ingredient-label {
         justify-content: center; 
