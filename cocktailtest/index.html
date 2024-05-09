@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/maw6itr.css">
+    <link rel="stylesheet" href="https://use.typekit.net/maw6itr.css">
+    <title>Cocktail Finder</title>
+</head>
+
+<body>
+<div class="container">
+
+    <div id="transition-overlay">
+       
+    </div>
+
+    <div class="left-section">
+        <h1>Find Your Cocktail</h1>
+
+        <h3>Choose the ingredients you like, then click "ready" to get your cocktail.<br>
+            When there is no exact match, you'll get a cocktail that contains some of the chosen ingredients.<br>
+            If you don't know what to choose, you can just click "ready" to get a random cocktail.</h3>
+      
+    <div class="ingredient-labels">
+        <div class="ingredient-label" onclick="toggleLabel(this)">Gin</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Bourbon</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Vodka</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Tequila</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Rum</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Whiskey</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Champagne</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Brandy</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Lime juice</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Lemon juice</dixv>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Pineapple juice</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Orange juice</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Sugar</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Sugar syrup</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Salt</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Bitters</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Cream</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Egg white</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Sprite</div>
+        <div class="ingredient-label" onclick="toggleLabel(this)">Carbonated water</div>
+    </div>
+
+    <div class="about-link">
+        <a href="" target="_blank">
+            <span class="about-text">About</span>
+        </a>
+    </div>
+    
+</div>
+
+    <div class="right-section">
+        <button onclick="goToResultPage()">Ready</button>
+    </div>
+</div>
+
+    <script>
+     
+        const selectedLabels = [];
+   
+        function toggleLabel(element) {
+            const label = element.innerText;
+            element.classList.toggle('active');
+
+            if (selectedLabels.includes(label)) {
+                selectedLabels.splice(selectedLabels.indexOf(label), 1);
+            } else {
+                selectedLabels.push(label);
+            }
+        }
+   
+        function goToResultPage() {
+           
+            const query = selectedLabels.join(',');
+            const encodedQuery = encodeURIComponent(query);
+     
+            if (encodedQuery === '') {
+                window.location.href = 'result.html';
+            } else {
+                window.location.href = `result.html?ingredients=${encodedQuery}`;
+            }
+        }
+
+function handleReadyClick() {
+    const selectedIngredients = getSelectedIngredients();
+    const queryParams = selectedIngredients.join(',');
+
+    if (queryParams.trim() === '') {
+     
+        window.location.href = 'result.html?random=true';
+    } else {
+        
+        window.location.href = `result.html?ingredients=${queryParams}`;
+    }
+}
+
+const transitionOverlay = document.getElementById('transition-overlay');
+
+function goToResultPage() {
+    
+    transitionOverlay.classList.add('show');
+
+    setTimeout(() => {
+        const query = selectedLabels.join(',');
+        const encodedQuery = encodeURIComponent(query);
+    
+        if (encodedQuery === '') {
+            window.location.href = 'result.html';
+        } else {
+            window.location.href = `result.html?ingredients=${encodedQuery}`;
+        }
+    }, 2000); 
+}
+
+const aboutButton = document.querySelector('.about-link');
+
+// 为 about 按钮添加点击事件处理程序
+aboutButton.addEventListener('click', function() {
+    // 跳转到 about.html 页面
+    window.location.href = 'about.html';
+});
+
+    </script>
+
+</body>
+</html>
+
