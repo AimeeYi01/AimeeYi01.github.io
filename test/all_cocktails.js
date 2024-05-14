@@ -39,7 +39,7 @@ async function displayFilteredCocktails() {
         'pineapple juice',
         'sugar',
         'salt',
-        'bitter',
+        'bitters',
         'sugar syrup',
         'cream',
         'sprite',
