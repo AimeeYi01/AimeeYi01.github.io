@@ -124,10 +124,8 @@ function recommendClosestCocktail(selectedIngredients) {
     const resultDiv = document.getElementById('result');
     const noticeDiv = document.getElementById('notice');
 
-  
     const selectedIngredientsArray = selectedIngredients.split(',');
     const randomIngredients = selectedIngredientsArray[Math.floor(Math.random() * selectedIngredientsArray.length)];
-
 
     fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${encodeURIComponent(randomIngredients)}`)
         .then(response => response.json())
@@ -170,7 +168,6 @@ function recommendClosestCocktail(selectedIngredients) {
         });
 }
 
-
 function displayCocktail(cocktail) {
     const imageElement = document.getElementById('cocktail-image');
     const nameElement = document.getElementById('cocktail-name');
@@ -198,7 +195,6 @@ function displayCocktail(cocktail) {
     if (cocktail.strInstructions) {
         instructionsElement.innerText = cocktail.strInstructions;
     }
-
 
     ingredientsListElement.innerHTML = '';
     for (let i = 1; i <= 15; i++) {
