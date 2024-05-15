@@ -43,7 +43,7 @@ h3 {
     font-family: "scrivano", serif;
     font-weight: 900;
     font-style: italic;
-    max-width: 700px;
+    max-width: 660px;
     text-align: center;
     margin: 0 auto;
 }
@@ -95,7 +95,7 @@ button {
     color: #FFF1C1; 
     border: none; 
     cursor: pointer; 
-    font-size: 75px; 
+    font-size: 80px; 
     letter-spacing: 4px;
     font-family: Pacifico, sans-serif; 
     font-weight: 800; 
@@ -217,13 +217,21 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .body {
-        padding: 10px;
+
+    body {
+        padding: 0px;
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
     }
         
     .container {
+        display: flex;
         flex-direction: column; 
-        height: auto;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
     }
 
     .left-section,
@@ -234,33 +242,51 @@ button:hover {
 
     .left-section, .right-section {
         height: auto;
-    }
-
-    .h3 {
-        max-width: 100px;
-        font-size: 12px;
-        width: 10px;
-        margin-top: -1vh;
         text-align: center;
-        margin: 30px auto;
     }
 
-    .ingredient-labels {
-        display: grid; 
-        grid-template-columns: repeat(4, 70px); 
-        gap: 25px; 
-        justify-content: center; 
-        margin-bottom: 6vh;
+    .right-section {
+        flex: none;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-image: url('rightbk.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
         text-align: center;
         align-items: center;
     }
 
+    h3 {
+        max-width: 310px;
+        font-size: 14px;
+        margin-top: -1.6vh;
+        text-align: center; 
+    }
+
+    .ingredient-labels {
+        display: grid; 
+        grid-template-columns: repeat(4, minmax(80px, 1fr)); 
+        grid-template-rows: repeat(5, auto); 
+        gap: 10px; 
+        justify-content: center; 
+        margin-bottom: 6.5vh;
+        text-align: center;
+        align-items: center;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 
     .ingredient-label {
         justify-content: center; 
-        padding: 4px 4px 4px 4px;
+        padding: 4px 4px;
         gap: 10px;
-        width: 80px; 
+        width: auto;
+        min-width: 80px; 
         height: 35px;
         border-radius: 90px; 
         border: 2px solid #216583; 
@@ -271,7 +297,11 @@ button:hover {
         font-family: "scrivano", serif;
         font-weight: 900; 
         font-style: normal; 
-        color: #216583; 
+        color: hsl(198, 60%, 32%); 
+    }
+
+    button {
+        margin-top: -6vh;
     }
 
     .about-link {
