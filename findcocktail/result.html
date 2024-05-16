@@ -72,19 +72,6 @@ window.onload = function() {
     searchCocktails();
 };
 
-// 定义变量用于保存自定义图片信息
-let customImages = {};
-
-// 加载自定义图片信息
-fetch('image.json')
-  .then(response => response.json())
-  .then(data => {
-    customImages = data;
-  })
-  .catch(error => {
-    console.error('Failed to load custom images:', error);
-  });
-
 function searchCocktails() {
     const noticeDiv = document.getElementById('notice');
 
@@ -195,12 +182,7 @@ function displayCocktail(cocktail) {
 
 
     if (cocktail.strDrinkThumb) {
-        // 使用自定义图片信息替换默认图片
-        if (customImages[cocktail.strDrink]) {
-            imageElement.src = customImages[cocktail.strDrink];
-        } else {
-            imageElement.src = cocktail.strDrinkThumb;
-        }
+        imageElement.src = cocktail.strDrinkThumb;
         imageElement.alt = cocktail.strDrink;
     }
 
@@ -252,4 +234,4 @@ window.addEventListener('load', function() {
     </script>
 </body>
 
-</html>
+</body>
