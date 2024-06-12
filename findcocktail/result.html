@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="result.css">
     <link rel="stylesheet" href="https://use.typekit.net/maw6itr.css">
-    <link rel="stylesheet" href="https://use.typekit.net/maw6itr.css">
     <title>Cocktail Result</title>
 </head>
 
@@ -16,9 +15,7 @@
 
     <div id="container">
 
-        <div id="loading-overlay">
-            
-        </div>
+        <div id="loading-overlay"></div>
 
         <div id="left-panel">
 
@@ -51,14 +48,11 @@
                 <div class="kong"></div>
             </div> 
 
-                <div id="refresh-button" class="refresh-button-container">
-                    <span class="refresh-text">One more</span> 
-                    <div class="refresh-circle"></div> 
-                    
-                </div>
-
+            <div id="refresh-button" class="refresh-button-container">
+                <span class="refresh-text">One more</span> 
+                <div class="refresh-circle"></div> 
             </div>
-           
+
         </div>
         
     </div>
@@ -76,20 +70,24 @@ function searchCocktails() {
     const noticeDiv = document.getElementById('notice');
 
     if (ingredients) {
-       
         fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${encodeURIComponent(ingredients)}`)
             .then(response => response.json())
             .then(data => {
                 if (data.drinks && data.drinks.length > 0) {
-               
                     const randomIndex = Math.floor(Math.random() * data.drinks.length);
                     const cocktailId = data.drinks[randomIndex].idDrink;
 
-            
                     fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${cocktailId}`)
                         .then(response => response.json())
                         .then(data => {
-                            displayCocktail(data.drinks[0]);
+                            loadLocalImages()
+                                .then(localImages => {
+                                    displayCocktail(data.drinks[0], localImages);
+                                })
+                                .catch(error => {
+                                    console.error(error);
+                                    displayCocktail(data.drinks[0], {});
+                                });
                         })
                         .catch(error => {
                             console.error(error);
@@ -97,7 +95,6 @@ function searchCocktails() {
                             noticeDiv.style.display = 'block';
                         });
                 } else {
-                    
                     recommendClosestCocktail(ingredients);
                     noticeDiv.style.display = 'block';
                 }
@@ -108,89 +105,67 @@ function searchCocktails() {
                 noticeDiv.style.display = 'block';
             });
     } else {
-    
-        fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/random.php`)
-            .then(response => response.json())
-            .then(data => {
-                displayCocktail(data.drinks[0]);
-            })
-            .catch(error => {
-                console.error(error);
-            });
+        fetchRandomCocktail();
     }
 }
 
-function recommendClosestCocktail(selectedIngredients) {
-    const resultDiv = document.getElementById('result');
-    const noticeDiv = document.getElementById('notice');
-
-    const selectedIngredientsArray = selectedIngredients.split(',');
-    const randomIngredients = selectedIngredientsArray[Math.floor(Math.random() * selectedIngredientsArray.length)];
-
-    fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${encodeURIComponent(randomIngredients)}`)
+function fetchRandomCocktail() {
+    fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/random.php`)
         .then(response => response.json())
         .then(data => {
-            if (data.drinks && data.drinks.length > 0) {
-         
-                const randomIndex = Math.floor(Math.random() * data.drinks.length);
-                const cocktailId = data.drinks[randomIndex].idDrink;
-
-       
-                fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${cocktailId}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        displayCocktail(data.drinks[0]);
-                     
-                        noticeDiv.style.display = 'block';
-                    })
-                    .catch(error => {
-                        console.error(error);
-                        resultDiv.innerHTML = 'An error occurred while fetching data. Please try again later.';
-                    });
-            } else {
-                
-                fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/random.php`)
-                    .then(response => response.json())
-                    .then(data => {
-                        displayCocktail(data.drinks[0]);
-                    
-                        noticeDiv.style.display = 'block';
-                    })
-                    .catch(error => {
-                        console.error(error);
-                        resultDiv.innerHTML = 'An error occurred while fetching data. Please try again later.';
-                    });
-            }
+            loadLocalImages()
+                .then(localImages => {
+                    displayCocktail(data.drinks[0], localImages);
+                })
+                .catch(error => {
+                    console.error(error);
+                    displayCocktail(data.drinks[0], {});
+                });
         })
         .catch(error => {
             console.error(error);
-            resultDiv.innerHTML = 'An error occurred while fetching data. Please try again later.';
         });
 }
 
-function displayCocktail(cocktail) {
+function loadLocalImages() {
+    return fetch('json/image.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Local images loaded:', data);
+            return data;
+        })
+        .catch(error => {
+            console.error('Error loading local images:', error);
+            return {};
+        });
+}
+
+function displayCocktail(cocktail, localImages) {
     const imageElement = document.getElementById('cocktail-image');
     const nameElement = document.getElementById('cocktail-name');
     const instructionsElement = document.getElementById('instructions');
     const ingredientsListElement = document.getElementById('ingredients');
 
- 
     if (!cocktail) {
         console.error("Cocktail data is empty or undefined.");
         return;
     }
 
-
-    if (cocktail.strDrinkThumb) {
-        imageElement.src = cocktail.strDrinkThumb;
-        imageElement.alt = cocktail.strDrink;
-    }
-
-
     if (cocktail.strDrink) {
         nameElement.innerText = cocktail.strDrink;
     }
 
+    if (localImages[cocktail.strDrink]) {
+        imageElement.src = 'cocktailimage/' + localImages[cocktail.strDrink];
+    } else if (cocktail.strDrinkThumb) {
+        imageElement.src = cocktail.strDrinkThumb;
+        imageElement.alt = cocktail.strDrink;
+    }
 
     if (cocktail.strInstructions) {
         instructionsElement.innerText = cocktail.strInstructions;
@@ -200,8 +175,6 @@ function displayCocktail(cocktail) {
     for (let i = 1; i <= 15; i++) {
         const ingredient = cocktail[`strIngredient${i}`];
         const measure = cocktail[`strMeasure${i}`];
-
-        
         if (ingredient) {
             const listItem = document.createElement('li');
             listItem.innerText = `${ingredient}${measure ? ` - ${measure}` : ''}`;
@@ -210,8 +183,56 @@ function displayCocktail(cocktail) {
     }
 }
 
-const backButton = document.getElementById('back-button');
+function recommendClosestCocktail(selectedIngredients) {
+    const noticeDiv = document.getElementById('notice');
 
+    if (selectedIngredients) {
+        const selectedIngredientsArray = selectedIngredients.split(',');
+        let foundCocktail = false;
+
+        selectedIngredientsArray.forEach(ingredient => {
+            fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${encodeURIComponent(ingredient)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.drinks && data.drinks.length > 0) {
+                        const randomIndex = Math.floor(Math.random() * data.drinks.length);
+                        const cocktailId = data.drinks[randomIndex].idDrink;
+
+                        fetch(`https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${cocktailId}`)
+                            .then(response => response.json())
+                            .then(data => {
+                                loadLocalImages()
+                                    .then(localImages => {
+                                        displayCocktail(data.drinks[0], localImages);
+                                        foundCocktail = true;
+                                    })
+                                    .catch(error => {
+                                        console.error(error);
+                                        displayCocktail(data.drinks[0], {});
+                                        foundCocktail = true;
+                                    });
+                            })
+                            .catch(error => {
+                                console.error(error);
+                            });
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        });
+
+        setTimeout(() => {
+            if (!foundCocktail) {
+                noticeDiv.style.display = 'block';
+            }
+        }, 2000);
+    } else {
+        fetchRandomCocktail();
+    }
+}
+
+const backButton = document.getElementById('back-button');
 backButton.addEventListener('click', function() {
     window.location.href = 'index.html';
 });
@@ -225,13 +246,13 @@ window.addEventListener('load', function() {
     });
 });
 
-    const refreshButton = document.getElementById('refresh-button');
+const refreshButton = document.getElementById('refresh-button');
+refreshButton.addEventListener('click', function() {
+    window.location.reload();
+});
 
-    refreshButton.addEventListener('click', function() {
-
-        window.location.reload();
-    });
-    </script>
-</body>
+</script>
 
 </body>
+</html>
+

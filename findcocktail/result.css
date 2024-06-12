@@ -93,10 +93,10 @@ span {
 
 #cocktail-frame {
     position: relative;
-    margin-top: -50px;
-    width: 500px; 
-    height: 750px; 
-    border: 2px solid #fff1c1;
+    margin-top: -20px;
+    width: 460px; 
+    height: 690px; 
+    border: 1.5px solid #fff1c1;
     border-top-left-radius: 360px;
     border-top-right-radius: 360px;
     border-bottom-left-radius: 7px;
@@ -117,7 +117,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%; 
-    background-color: rgba(255, 241, 193, 0.1); 
+    background-color: rgba(255, 241, 193, 0.15); 
     z-index: 1; 
 }
 
@@ -131,7 +131,7 @@ span {
 #notice {
     display: none;
     position: absolute;
-    bottom: 2.5vh; 
+    bottom: 3vh; 
     width: 80%; 
     padding: 20px; 
     color: #fff1c1; 
@@ -264,7 +264,7 @@ span {
 
     #right-panel {
         width: 100%;
-        height: auto;
+        height: 100%;
         overflow-y: scroll;
     }
 
@@ -274,9 +274,9 @@ span {
         overflow-y: scroll;
     }
 
-      #cocktail-image {
+    #cocktail-image {
         max-height: 320px;
-        width: auto;
+        width: 320px;
     }
 
     #cocktail-frame {
@@ -286,11 +286,11 @@ span {
 
     #notice {
         position: absolute; 
-        top: 40%;
+        top: calc(41%);
         width: 70%; 
         text-align: center; 
         color: #fff1c1; 
         font-size: 14px;
-        line-height: 1.2;
+        line-height: 1.3;
     }
 }
