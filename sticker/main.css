@@ -1,0 +1,95 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+}
+
+/* 滚动字幕 */
+.marquee {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 贴纸网格 */
+.sticker-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 固定每行6个 */
+    grid-gap: 10px;
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    justify-items: center; /* 居中对齐 */
+}
+
+.sticker-grid img {
+    max-width: 100%;  /* 保持贴纸的原始比例 */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.sticker-grid img:hover {
+    transform: scale(1.1);
+}
+
+.sticker.selected {
+    border: 3px solid #00ff00;
+    border-radius: 5px;
+}
+
+/* 左下角贴纸统计 */
+.sticker-count {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 右下角 ready 按钮 */
+.ready-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.ready-button button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.ready-button button:hover {
+    background-color: #218838;
+}

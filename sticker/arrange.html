@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticker Layout</title>
+    <link rel="stylesheet" href="arrange.css">
+</head>
+<body>
+    <div class="selected-stickers">
+        <p>Drag and drop your stickers onto the image below:</p>
+        <div id="stickerContainer">
+            <!-- 这里展示用户选择的贴纸 -->
+        </div>
+    </div>
+
+    <!-- 中间：显示图片区域 -->
+    <div class="image-container">
+        <img id="currentImage" src="bk1.jpg" alt="Image 1">
+    </div>
+
+    <!-- 下方：选择图片的按钮 -->
+    <div class="image-selector">
+        <button class="image-btn" onclick="changeImage(1)">1</button>
+        <button class="image-btn" onclick="changeImage(2)">2</button>
+        <button class="image-btn" onclick="changeImage(3)">3</button>
+        <button class="image-btn" onclick="changeImage(4)">4</button>
+    </div>
+
+    <script src="dragdrop.js"></script>
+</body>
+</html>
